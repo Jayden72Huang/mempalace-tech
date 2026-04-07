@@ -4,7 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navItems = [
-  { href: "/guides/setup", label: "Setup Guide" },
+  { href: "/story", label: "The Story" },
+  { href: "/benchmarks", label: "Benchmarks" },
+  { href: "/guides/setup", label: "Setup" },
   { href: "/compare/mempalace-vs-mem0", label: "vs Mem0" },
   { href: "https://github.com/milla-jovovich/mempalace", label: "GitHub", external: true },
 ];

@@ -152,7 +152,7 @@ The bigger insight: "store everything, then make it findable" is beating "use AI
 
 This mirrors a pattern across tech — raw data + smart retrieval > pre-filtered data. Search engines figured this out 20 years ago. AI memory is catching up.
 
-Try it: pip install mempalace
+Try it: pip install mempalace 
 Site: https://www.mempalace.tech
 
 ---
