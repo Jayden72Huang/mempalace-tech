@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "MemPalace vs Mem0 — Which AI Memory System Should You Choose?",
   description:
     "In-depth comparison of MemPalace and Mem0: benchmarks, pricing, architecture, and features. Find out which AI memory framework is right for your project.",
-  alternates: { canonical: "https://mempalace.tech/compare/mempalace-vs-mem0" },
+  alternates: { canonical: "https://www.mempalace.tech/compare/mempalace-vs-mem0" },
   keywords: [
     "mempalace vs mem0",
     "mem0 alternative",
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     title: "MemPalace vs Mem0 — Which AI Memory System Should You Choose?",
     description:
       "In-depth comparison of MemPalace and Mem0: benchmarks, pricing, architecture, and features.",
-    url: "https://mempalace.tech/compare/mempalace-vs-mem0",
-    type: "article",
+    url: "https://www.mempalace.tech/compare/mempalace-vs-mem0",
+      type: "article",
   },
   twitter: {
     card: "summary_large_image",
@@ -47,7 +47,7 @@ const jsonLd = {
       dateModified: "2026-04-07",
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://mempalace.tech/compare/mempalace-vs-mem0",
+        "@id": "https://www.mempalace.tech/compare/mempalace-vs-mem0",
       },
     },
     {

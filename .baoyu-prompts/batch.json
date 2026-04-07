@@ -1,0 +1,41 @@
+{
+  "jobs": 4,
+  "tasks": [
+    {
+      "id": "hero",
+      "promptFiles": ["hero.md"],
+      "image": "../public/images/hero-palace.png",
+      "provider": "google",
+      "model": "gemini-3-pro-image-preview",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "architecture",
+      "promptFiles": ["architecture.md"],
+      "image": "../public/images/architecture.png",
+      "provider": "google",
+      "model": "gemini-3-pro-image-preview",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "og-image",
+      "promptFiles": ["og-image.md"],
+      "image": "../public/images/og-image.png",
+      "provider": "google",
+      "model": "gemini-3-pro-image-preview",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "comparison",
+      "promptFiles": ["comparison.md"],
+      "image": "../public/images/comparison.png",
+      "provider": "google",
+      "model": "gemini-3-pro-image-preview",
+      "ar": "16:9",
+      "quality": "2k"
+    }
+  ]
+}

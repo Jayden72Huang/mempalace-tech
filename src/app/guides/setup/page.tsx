@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "MemPalace Setup Guide — Install & Configure in 5 Minutes",
   description:
     "Step-by-step guide to install MemPalace, the AI memory system. Works with Claude, ChatGPT, Cursor, and local LLMs. pip install mempalace.",
-  alternates: { canonical: "https://mempalace.tech/guides/setup" },
+  alternates: { canonical: "https://www.mempalace.tech/guides/setup" },
 };
 
 /* ---------- tiny helpers (server-only, zero JS shipped) ---------- */

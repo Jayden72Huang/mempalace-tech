@@ -8,7 +8,7 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mempalace.tech"),
+  metadataBase: new URL("https://www.mempalace.tech"),
   title: {
     default: "MemPalace — The AI Memory System That Scores 100% on LongMemEval",
     template: "%s | MemPalace.tech",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "MemPalace — The AI Memory System That Scores 100% on LongMemEval",
     description:
       "Independent guides, benchmarks, and comparisons for MemPalace — the open-source AI memory system.",
-    url: "https://mempalace.tech",
+    url: "https://www.mempalace.tech",
     images: [{ url: "/images/og-image.png", width: 1200, height: 675, alt: "MemPalace — 100% LongMemEval Score" }],
   },
   twitter: {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
       "The independent resource hub for MemPalace, the AI memory system that scored 100% on LongMemEval.",
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://mempalace.tech" },
+  alternates: { canonical: "https://www.mempalace.tech" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
