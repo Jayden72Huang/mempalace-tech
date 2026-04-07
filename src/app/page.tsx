@@ -150,6 +150,9 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Why a Hollywood Actress Started Coding AI Tools
           </h2>
+          <div className="mt-8 overflow-hidden rounded-xl border border-card-border">
+            <Image src="/images/milla-story.png" alt="Milla Jovovich coding MemPalace — the actress turned AI developer, with a holographic memory palace in the background" width={1200} height={675} className="w-full" priority />
+          </div>
           <div className="mt-8 space-y-6 text-muted leading-relaxed">
             <p className="text-lg">
               <strong className="text-foreground">Milla Jovovich</strong> — the actress behind Alice in the <em>Resident Evil</em> franchise and
