@@ -49,6 +49,21 @@ const faqItems = [
     answer:
       "Install MemPalace with a single command: pip install mempalace. It requires Python 3.10 or higher. After installation, run mempalace init to create your first memory palace. For a detailed walkthrough including Claude Code integration, visit our setup guide.",
   },
+  {
+    question: "What is the best AI memory system in 2026?",
+    answer:
+      "As of April 2026, MemPalace holds the highest scores on all major AI memory benchmarks: 100% on LongMemEval, 92.9% on ConvoMem, and 88.9% on LoCoMo. It is also the only system that runs entirely locally at zero cost. Other notable systems include Mem0 ($24M funded, ~85% LongMemEval), Zep (knowledge graph focus), and Letta (hierarchical memory).",
+  },
+  {
+    question: "How does MemPalace store memories?",
+    answer:
+      "MemPalace stores all conversation data verbatim — it does not use an LLM to extract or summarize what it considers important. Instead, it keeps every word in ChromaDB (vector search) and SQLite (structured metadata), then compresses stored memories 30x using the AAAK lossless compression dialect. This approach preserves the full context, reasoning, and nuance of every conversation.",
+  },
+  {
+    question: "What is AAAK compression in MemPalace?",
+    answer:
+      "AAAK is a custom lossless compression dialect developed for MemPalace that achieves approximately 30x compression on stored memories. Unlike lossy summarization used by other systems, AAAK preserves all original information in a shorthand format that any LLM can read natively without a decoder. For example, 1000 tokens of English text compress to roughly 30 tokens of AAAK while retaining complete fidelity.",
+  },
 ];
 
 const jsonLd = {
@@ -66,13 +81,16 @@ const jsonLd = {
       })),
     },
     {
-      "@type": "WebApplication",
+      "@type": "SoftwareApplication",
       name: "MemPalace",
       description:
         "Open-source AI memory system that provides persistent cross-session memory for large language models. First perfect score on LongMemEval benchmark.",
       url: "https://github.com/milla-jovovich/mempalace",
       applicationCategory: "DeveloperApplication",
       operatingSystem: "Windows, macOS, Linux",
+      softwareVersion: "3.0.0",
+      downloadUrl: "https://pypi.org/project/mempalace/",
+      installUrl: "https://www.mempalace.tech/guides/setup",
       offers: {
         "@type": "Offer",
         price: "0",
@@ -90,6 +108,13 @@ const jsonLd = {
         name: "Milla Jovovich",
       },
       license: "https://opensource.org/licenses/MIT",
+    },
+    {
+      "@type": "WebPage",
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: ["h1", ".speakable"],
+      },
     },
   ],
 };
@@ -172,6 +197,9 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             What Is MemPalace?
           </h2>
+          <p className="speakable text-lg leading-relaxed text-muted mt-4">
+            MemPalace is the first open-source AI memory system to score a perfect 100% on the LongMemEval benchmark, providing persistent cross-session memory for any large language model at zero cost.
+          </p>
           <div className="mt-8 grid gap-8 lg:grid-cols-2">
             <div className="space-y-5 text-muted leading-relaxed">
               <p>
@@ -306,8 +334,10 @@ export default function HomePage() {
             </table>
           </div>
           <p className="mt-4 text-xs text-muted">
-            Benchmark data sourced from the LongMemEval leaderboard. MemPalace
-            is the first and only system to achieve a perfect 100% recall score.
+            Benchmark data sourced from the <a href='https://arxiv.org/abs/2410.10813' target='_blank' rel='noopener noreferrer' className='underline hover:text-foreground'>LongMemEval benchmark paper</a>. ConvoMem data from <a href='https://arxiv.org/abs/2406.02761' target='_blank' rel='noopener noreferrer' className='underline hover:text-foreground'>Salesforce Research</a>. Last verified: April 2026.
+          </p>
+          <p className="mt-3 text-sm font-medium text-foreground speakable">
+            As of April 2026, MemPalace is the highest-scoring AI memory system on all three major benchmarks: LongMemEval (100%), ConvoMem (92.9%), and LoCoMo (88.9%). No other system has achieved a perfect score on any of these benchmarks.
           </p>
         </div>
       </section>

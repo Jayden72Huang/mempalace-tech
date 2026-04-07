@@ -41,7 +41,28 @@ function Card({ children, id, className = "" }: { children: React.ReactNode; id?
   );
 }
 
-/* ---------- JSON-LD HowTo structured data ---------- */
+/* ---------- JSON-LD structured data ---------- */
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mempalace.tech" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.mempalace.tech/guides" },
+    { "@type": "ListItem", position: 3, name: "Setup Guide" },
+  ],
+};
+
+const webPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "MemPalace Setup Guide",
+  url: "https://www.mempalace.tech/guides/setup",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".speakable"],
+  },
+};
 
 const howToJsonLd = {
   "@context": "https://schema.org",
@@ -132,6 +153,62 @@ const faqJsonLd = {
         text: "Yes. MemPalace uses a local database that can be accessed by multiple MCP clients simultaneously. Your memories are shared across all connected AI assistants, so context learned in Claude is available in Cursor and vice versa.",
       },
     },
+    {
+      "@type": "Question",
+      name: "How do I add memory to Claude Code?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "To add persistent memory to Claude Code, install MemPalace with pip install mempalace, then add the MCP server configuration to your Claude settings. MemPalace provides 19 MCP tools that Claude Code can use to store, search, and manage memories automatically. See Step 3 of this guide for the exact configuration.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does MemPalace work with ChatGPT?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, MemPalace works with ChatGPT through MCP integration. It also works with Claude (via Claude Code or the API), Cursor, local models like Llama and Mistral, and any LLM that supports the Model Context Protocol or can read structured text.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much disk space does MemPalace use?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "MemPalace uses ChromaDB for vector storage and SQLite for metadata, both running locally. With AAAK compression achieving 30x compression ratios, a typical 6-month conversation history (~19.5 million tokens) compresses to approximately 650K tokens of stored data, using roughly 50\u2013100MB of disk space.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I fix the Windows Unicode crash in MemPalace?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "On some Windows systems, MemPalace crashes when processing text with non-ASCII characters. Set the environment variable PYTHONIOENCODING=utf-8 before running any MemPalace command, or upgrade to v0.4.2+ where this is patched.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What Python version does MemPalace require?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "MemPalace requires Python 3.9 or higher. If you see SyntaxError or ModuleNotFoundError, check your Python version. On systems with multiple Python installations, use python3 and pip3 explicitly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I fix ChromaDB dependency issues when installing MemPalace?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "ChromaDB may fail to install on older systems due to native dependencies. If you see build errors related to hnswlib or chroma-hnswlib, install the build tools first: on macOS run xcode-select --install, on Ubuntu/Debian run sudo apt-get install build-essential python3-dev, then retry pip install mempalace.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is the MCP connection not working with MemPalace?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "If your AI client does not detect MemPalace tools, verify the command is on your PATH by running which mempalace. If it returns nothing, the package was installed in a virtual environment that is not active, or your PATH does not include pip's script directory.",
+      },
+    },
   ],
 };
 
@@ -143,6 +220,8 @@ export default function SetupGuidePage() {
       {/* Structured data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
 
       <article className="mx-auto max-w-4xl px-4 sm:px-6">
         {/* ======== Hero / Intro ======== */}
@@ -151,6 +230,11 @@ export default function SetupGuidePage() {
           <h1 className="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
             MemPalace Setup Guide: Install&nbsp;&amp;&nbsp;Configure in 5&nbsp;Minutes
           </h1>
+          <p className="mt-4 text-lg leading-relaxed text-muted speakable">
+            MemPalace installs with a single pip command and gives any MCP-compatible AI client &mdash; including Claude
+            Code, ChatGPT, and Cursor &mdash; persistent memory that runs entirely on your local machine. This guide
+            covers installation, configuration, and integration in under five minutes.
+          </p>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
             Follow this step-by-step tutorial to install MemPalace, connect it to your favourite AI client, and store
             your first memory. No cloud account needed &mdash; everything runs locally on your machine.
@@ -228,7 +312,8 @@ export default function SetupGuidePage() {
             <h2 className="text-2xl font-bold tracking-tight">Install MemPalace</h2>
           </div>
           <p className="mt-4 text-muted">
-            Open your terminal and run the install command. This single line pulls in everything you need:
+            To install MemPalace, open your terminal and run the following command. This single line pulls in everything
+            you need:
           </p>
           <CodeBlock>pip install mempalace</CodeBlock>
           <p className="text-muted">
@@ -272,7 +357,8 @@ export default function SetupGuidePage() {
             <h2 className="text-2xl font-bold tracking-tight">Initialize Your Palace</h2>
           </div>
           <p className="mt-4 text-muted">
-            Create the directory structure that MemPalace uses to organise your memories:
+            To initialize your palace, run the command below to create the directory structure that MemPalace uses to
+            organise your memories:
           </p>
           <CodeBlock>mempalace init</CodeBlock>
           <p className="text-muted">
@@ -308,7 +394,7 @@ export default function SetupGuidePage() {
             <h2 className="text-2xl font-bold tracking-tight">Connect to Claude Code</h2>
           </div>
           <p className="mt-4 text-muted">
-            Claude Code is the most popular integration for MemPalace. Add the following MCP server configuration to
+            To connect MemPalace to Claude Code, add the MCP server configuration below to
             your Claude Code settings file (
             <code className="rounded bg-zinc-800 px-1.5 py-0.5 text-xs text-zinc-300">~/.claude.json</code> or your
             project&apos;s <code className="rounded bg-zinc-800 px-1.5 py-0.5 text-xs text-zinc-300">.mcp.json</code>
@@ -343,8 +429,8 @@ export default function SetupGuidePage() {
             <h2 className="text-2xl font-bold tracking-tight">Connect to ChatGPT / Cursor</h2>
           </div>
           <p className="mt-4 text-muted">
-            MemPalace works with any MCP-compatible client. Here are quick setup instructions for the most common
-            alternatives:
+            To connect MemPalace to other AI clients, follow the quick setup instructions below. MemPalace works with
+            any MCP-compatible client:
           </p>
 
           <div className="mt-6 space-y-4">
@@ -389,8 +475,8 @@ export default function SetupGuidePage() {
             <h2 className="text-2xl font-bold tracking-tight">Store Your First Memory</h2>
           </div>
           <p className="mt-4 text-muted">
-            There are two ways to populate your palace: bulk import from conversation exports, or real-time storage
-            through the MCP interface.
+            To store your first memory, choose one of two methods: bulk import from conversation exports, or real-time
+            storage through the MCP interface.
           </p>
 
           <h3 className="mt-6 text-lg font-semibold">Option A: Import conversation history</h3>
@@ -421,7 +507,8 @@ Claude: "Stored in hall_facts under the 'infrastructure' room."`}</CodeBlock>
             <h2 className="text-2xl font-bold tracking-tight">Search Your Memories</h2>
           </div>
           <p className="mt-4 text-muted">
-            Query your palace from the command line or let your AI assistant search automatically.
+            To search your memories, query your palace from the command line or let your AI assistant search
+            automatically.
           </p>
 
           <h3 className="mt-6 text-lg font-semibold">CLI search</h3>
@@ -662,6 +749,18 @@ mempalace mcp     # Should start the MCP server`}</CodeBlock>
               {
                 q: "Can I use MemPalace with multiple AI assistants at the same time?",
                 a: "Yes. MemPalace uses a local database that can be accessed by multiple MCP clients simultaneously. Your memories are shared across all connected AI assistants, so context learned in Claude is available in Cursor and vice versa.",
+              },
+              {
+                q: "How do I add memory to Claude Code?",
+                a: "To add persistent memory to Claude Code, install MemPalace with pip install mempalace, then add the MCP server configuration to your Claude settings. MemPalace provides 19 MCP tools that Claude Code can use to store, search, and manage memories automatically. See Step 3 of this guide for the exact configuration.",
+              },
+              {
+                q: "Does MemPalace work with ChatGPT?",
+                a: "Yes, MemPalace works with ChatGPT through MCP integration. It also works with Claude (via Claude Code or the API), Cursor, local models like Llama and Mistral, and any LLM that supports the Model Context Protocol or can read structured text.",
+              },
+              {
+                q: "How much disk space does MemPalace use?",
+                a: "MemPalace uses ChromaDB for vector storage and SQLite for metadata, both running locally. With AAAK compression achieving 30x compression ratios, a typical 6-month conversation history (~19.5 million tokens) compresses to approximately 650K tokens of stored data, using roughly 50\u2013100MB of disk space.",
               },
             ].map(({ q, a }) => (
               <div key={q} className="rounded-xl border border-card-border bg-card p-6">

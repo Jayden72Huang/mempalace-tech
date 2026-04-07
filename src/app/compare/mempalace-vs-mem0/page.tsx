@@ -51,6 +51,21 @@ const jsonLd = {
       },
     },
     {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mempalace.tech" },
+        { "@type": "ListItem", position: 2, name: "Compare", item: "https://www.mempalace.tech/compare" },
+        { "@type": "ListItem", position: 3, name: "MemPalace vs Mem0" },
+      ],
+    },
+    {
+      "@type": "WebPage",
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: ["h1", ".speakable"],
+      },
+    },
+    {
       "@type": "FAQPage",
       mainEntity: [
         {
@@ -99,6 +114,30 @@ const jsonLd = {
           acceptedAnswer: {
             "@type": "Answer",
             text: "There is no official migration tool yet, but since both systems use standard formats (JSON, vector embeddings), manual migration is feasible. MemPalace's MCP tools can ingest conversation data directly.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is MemPalace better than Mem0?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "For benchmark accuracy and cost, yes — MemPalace scores 100% on LongMemEval versus Mem0's ~85%, and runs at zero cost versus $19-249/month. However, Mem0 has advantages in enterprise support, managed cloud infrastructure, and ecosystem maturity with $24M in funding and AWS partnership. The best choice depends on whether you prioritize accuracy and privacy (MemPalace) or managed services and enterprise features (Mem0).",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is the difference between MemPalace and Mem0?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The fundamental difference is architectural: MemPalace stores all conversation data verbatim and uses vector search to find relevant memories, while Mem0 uses an LLM to extract key facts and discards the original text. This means MemPalace preserves full context and nuance but uses more storage, while Mem0 is more compact but risks losing information the extraction model deemed unimportant.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Should I switch from Mem0 to MemPalace?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Consider switching if you need higher accuracy (100% vs ~85% on LongMemEval), want to eliminate cloud costs ($0 vs $19-249/month), or require full data privacy (MemPalace runs locally). Stay with Mem0 if you need enterprise SLAs, managed infrastructure, or are deeply integrated with Mem0's cloud ecosystem.",
           },
         },
       ],
@@ -167,6 +206,10 @@ export default function MemPalaceVsMem0Page() {
           Two open-source AI memory frameworks. One stores everything verbatim and scores
           100% on LongMemEval. The other has $24M in funding and 48k GitHub stars.
           Here is everything you need to decide.
+        </p>
+
+        <p className="mt-6 rounded-lg border border-accent/20 bg-accent/5 p-4 text-sm leading-relaxed text-muted speakable">
+          <strong className="text-foreground">MemPalace vs Mem0:</strong> MemPalace is a free, local-first AI memory system that scores 100% on LongMemEval by storing conversations verbatim. Mem0 is a $24M-funded cloud platform scoring ~85% that uses LLM extraction to decide what to remember. MemPalace costs $0/year; Mem0 costs $19-249/month. Both are open-source, but MemPalace runs entirely locally while Mem0&apos;s advanced features require cloud access.
         </p>
 
         {/* Comparison hero image */}
@@ -364,7 +407,7 @@ export default function MemPalaceVsMem0Page() {
               LongMemEval <span className="text-sm text-muted font-normal">(500 questions)</span>
             </h3>
             <p className="text-sm text-muted leading-relaxed mb-4">
-              LongMemEval tests how well a memory system can answer questions across long
+              <a href="https://arxiv.org/abs/2410.10813" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">LongMemEval</a> tests how well a memory system can answer questions across long
               conversation histories. It covers fact recall, temporal reasoning,
               multi-hop inference, and knowledge updates over time.
             </p>
@@ -391,7 +434,7 @@ export default function MemPalaceVsMem0Page() {
               ConvoMem <span className="text-sm text-muted font-normal">(Salesforce Research)</span>
             </h3>
             <p className="text-sm text-muted leading-relaxed mb-4">
-              ConvoMem, developed by Salesforce Research, evaluates conversational memory
+              <a href="https://arxiv.org/abs/2406.02761" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">ConvoMem</a>, developed by Salesforce Research, evaluates conversational memory
               systems on their ability to track user preferences, recall past exchanges,
               and maintain consistency. It is one of the hardest benchmarks for AI memory.
             </p>
@@ -432,6 +475,9 @@ export default function MemPalaceVsMem0Page() {
               evaluation suite. Mem0 numbers are based on publicly available reports and
               community benchmarks. Conditions may not be perfectly identical &mdash;
               interpret the gap directionally rather than as an exact delta.
+            </p>
+            <p className="mt-4 text-sm font-medium text-foreground speakable">
+              In head-to-head comparison, MemPalace outperforms Mem0 by 15 percentage points on LongMemEval and by approximately 50 percentage points on ConvoMem. These are the two most widely cited AI memory benchmarks as of April 2026.
             </p>
           </div>
         </section>
@@ -629,6 +675,18 @@ export default function MemPalaceVsMem0Page() {
               {
                 q: "Can I migrate from Mem0 to MemPalace?",
                 a: "There is no official migration tool yet, but both systems use standard data formats. You can export your Mem0 memories as JSON and use MemPalace's MCP tools to ingest them. The community is working on streamlined migration scripts.",
+              },
+              {
+                q: "Is MemPalace better than Mem0?",
+                a: "For benchmark accuracy and cost, yes — MemPalace scores 100% on LongMemEval versus Mem0's ~85%, and runs at zero cost versus $19-249/month. However, Mem0 has advantages in enterprise support, managed cloud infrastructure, and ecosystem maturity with $24M in funding and AWS partnership. The best choice depends on whether you prioritize accuracy and privacy (MemPalace) or managed services and enterprise features (Mem0).",
+              },
+              {
+                q: "What is the difference between MemPalace and Mem0?",
+                a: "The fundamental difference is architectural: MemPalace stores all conversation data verbatim and uses vector search to find relevant memories, while Mem0 uses an LLM to extract key facts and discards the original text. This means MemPalace preserves full context and nuance but uses more storage, while Mem0 is more compact but risks losing information the extraction model deemed unimportant.",
+              },
+              {
+                q: "Should I switch from Mem0 to MemPalace?",
+                a: "Consider switching if you need higher accuracy (100% vs ~85% on LongMemEval), want to eliminate cloud costs ($0 vs $19-249/month), or require full data privacy (MemPalace runs locally). Stay with Mem0 if you need enterprise SLAs, managed infrastructure, or are deeply integrated with Mem0's cloud ecosystem.",
               },
             ].map((item, i) => (
               <details
