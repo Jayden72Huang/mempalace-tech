@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "MemPalace: The Open-Source AI Memory System That Scores 100%",
   description:
-    "MemPalace is the open-source AI memory system that scored a perfect 100% on LongMemEval. Free, local-first, MIT licensed. Compare MemPalace vs Mem0, Zep, and more.",
+    "MemPalace: open-source AI memory system, first 100% on LongMemEval. Free, local-first, MIT licensed. Compare vs Mem0, Zep & more.",
   keywords: [
     "mempalace",
     "ai memory system",

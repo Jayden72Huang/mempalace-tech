@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "MemPalace vs Mem0 — Which AI Memory System Should You Choose?",
+  title: "MemPalace vs Mem0 — AI Memory Comparison 2026",
   description:
-    "In-depth comparison of MemPalace and Mem0: benchmarks, pricing, architecture, and features. Find out which AI memory framework is right for your project.",
+    "MemPalace vs Mem0: benchmarks, pricing, architecture compared. MemPalace scores 100% on LongMemEval vs Mem0's 85%. Free vs $19-249/mo.",
   alternates: { canonical: "https://www.mempalace.tech/compare/mempalace-vs-mem0" },
   keywords: [
     "mempalace vs mem0",
@@ -17,17 +17,19 @@ export const metadata: Metadata = {
     "persistent ai memory",
   ],
   openGraph: {
-    title: "MemPalace vs Mem0 — Which AI Memory System Should You Choose?",
-    description:
-      "In-depth comparison of MemPalace and Mem0: benchmarks, pricing, architecture, and features.",
+    title: "MemPalace vs Mem0 — AI Memory Comparison 2026",
+    description: "MemPalace scores 100% on LongMemEval vs Mem0's 85%. Free local-first vs $19-249/mo cloud. Full comparison.",
     url: "https://www.mempalace.tech/compare/mempalace-vs-mem0",
-      type: "article",
+    type: "article",
+    images: [{ url: "/images/comparison.png", width: 1200, height: 675, alt: "MemPalace vs Mem0 comparison" }],
+    siteName: "MemPalace.tech",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "MemPalace vs Mem0 — AI Memory System Comparison",
-    description:
-      "Benchmarks, pricing, architecture — everything you need to choose between MemPalace and Mem0.",
+    title: "MemPalace vs Mem0 — AI Memory Comparison 2026",
+    description: "MemPalace 100% vs Mem0 85% on LongMemEval. Free vs $249/mo. Full breakdown.",
+    images: ["/images/comparison.png"],
   },
 };
 

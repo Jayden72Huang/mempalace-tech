@@ -3,10 +3,22 @@ import Link from "next/link";
 import CopyButton from "@/components/CopyButton";
 
 export const metadata: Metadata = {
-  title: "MemPalace Setup Guide — Install & Configure in 5 Minutes",
+  title: "MemPalace Setup Guide — Install in 5 Minutes",
   description:
-    "Step-by-step guide to install MemPalace, the AI memory system. Works with Claude, ChatGPT, Cursor, and local LLMs. pip install mempalace.",
+    "Step-by-step guide to install MemPalace, the AI memory system. Works with Claude, ChatGPT, Cursor, and local LLMs.",
   alternates: { canonical: "https://www.mempalace.tech/guides/setup" },
+  openGraph: {
+    title: "MemPalace Setup Guide — Install in 5 Minutes",
+    description: "Step-by-step guide to install MemPalace. Works with Claude Code, ChatGPT, Cursor, and local LLMs.",
+    url: "https://www.mempalace.tech/guides/setup",
+    type: "article",
+    images: [{ url: "/images/architecture.png", width: 1200, height: 675, alt: "MemPalace architecture diagram" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MemPalace Setup Guide — Install in 5 Minutes",
+    description: "Step-by-step guide to install MemPalace. Works with Claude Code, ChatGPT, Cursor, and local LLMs.",
+  },
 };
 
 /* ---------- tiny helpers (server-only, zero JS shipped) ---------- */
