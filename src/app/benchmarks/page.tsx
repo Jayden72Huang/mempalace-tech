@@ -12,6 +12,13 @@ export const metadata: Metadata = {
       "Independent analysis of MemPalace's benchmark claims and the controversy around them.",
     url: "https://www.mempalace.tech/benchmarks",
     type: "article",
+    images: [{ url: "/images/og-image.png", width: 1200, height: 675, alt: "MemPalace Benchmark Analysis" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MemPalace Benchmark Analysis — Is 100% Real?",
+    description: "Independent analysis of MemPalace's benchmark claims and the controversy.",
+    images: ["/images/og-image.png"],
   },
 };
 

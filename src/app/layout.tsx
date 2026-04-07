@@ -11,7 +11,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mempalace.tech"),
   title: {
-    default: "MemPalace — The AI Memory System That Scores 100% on LongMemEval",
+    default: "MemPalace — Milla Jovovich's AI Memory System",
     template: "%s | MemPalace.tech",
   },
   description:
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "MemPalace.tech",
-    title: "MemPalace — The AI Memory System That Scores 100% on LongMemEval",
+    title: "MemPalace — Milla Jovovich's AI Memory System",
     description:
-      "Independent guides, benchmarks, and comparisons for MemPalace — the open-source AI memory system.",
+      "Milla Jovovich built an AI memory system with 7000+ stars. The story, benchmark controversy, and how it works.",
     url: "https://www.mempalace.tech",
     images: [{ url: "/images/og-image.png", width: 1200, height: 675, alt: "MemPalace — 100% LongMemEval Score" }],
   },

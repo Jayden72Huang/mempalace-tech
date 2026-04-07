@@ -3,9 +3,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "MemPalace — Milla Jovovich's AI Memory System That Broke Every Benchmark",
+  title: "MemPalace — Milla Jovovich's AI Memory System",
   description:
-    "Resident Evil actress Milla Jovovich built an AI memory system with 7000+ GitHub stars. The full story, benchmark controversy, and how it works.",
+    "Milla Jovovich built an AI memory system with 7000+ stars. The story, benchmark controversy, and how it works.",
   keywords: [
     "mempalace",
     "milla jovovich",
