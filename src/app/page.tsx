@@ -487,23 +487,14 @@ export default async function HomePage() {
               <p className="text-sm font-medium uppercase tracking-widest text-accent">Weekly newsletter</p>
               <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">AI Memory System Weekly</h2>
               <p className="mt-3 text-muted">Framework updates, benchmark news, controversy breakdowns. One email/week.</p>
-              <form
-                action="https://ai-memory-weekly.beehiiv.com/subscribe"
-                method="post"
+              <a
+                href="https://ai-memory-weekly.beehiiv.com"
                 target="_blank"
-                className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent-hover"
               >
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="your@email.com"
-                  required
-                  className="w-full max-w-xs rounded-full border border-card-border bg-background px-5 py-3 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none sm:w-auto"
-                />
-                <button type="submit" className="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover">
-                  Subscribe
-                </button>
-              </form>
+                Subscribe Free &rarr;
+              </a>
               <p className="mt-3 text-xs text-muted">Free. No spam. Unsubscribe anytime.</p>
             </div>
           </div>
