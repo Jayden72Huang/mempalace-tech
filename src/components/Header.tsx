@@ -5,11 +5,11 @@ import Image from "next/image";
 import { useState } from "react";
 
 const navItems = [
-  { href: "/story", label: "The Story" },
+  { href: "/story", label: "Story" },
   { href: "/benchmarks", label: "Benchmarks" },
+  { href: "/tools", label: "Tools" },
   { href: "/quiz", label: "Quiz" },
   { href: "/guides/setup", label: "Setup" },
-  { href: "/compare/mempalace-vs-mem0", label: "vs Mem0" },
 ];
 
 export default function Header() {

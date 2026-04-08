@@ -48,10 +48,24 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.mempalace.tech" },
 };
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "MemPalace.tech",
+  url: "https://www.mempalace.tech",
+  description: "Independent guides, benchmarks, and comparisons for AI memory systems.",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: { "@type": "EntryPoint", urlTemplate: "https://www.google.com/search?q=site:mempalace.tech+{search_term_string}" },
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7779254174392960"

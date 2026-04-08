@@ -457,6 +457,18 @@ export default function StoryPage() {
               >
                 MemPalace vs Mem0 &rarr;
               </Link>
+              <Link
+                href="/tools"
+                className="inline-flex items-center rounded-full border border-card-border px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-card"
+              >
+                All AI Memory Tools &rarr;
+              </Link>
+              <Link
+                href="/quiz"
+                className="inline-flex items-center rounded-full border border-card-border px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-card"
+              >
+                Take the Quiz &rarr;
+              </Link>
             </div>
           </div>
         </div>

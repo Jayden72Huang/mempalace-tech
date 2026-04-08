@@ -763,14 +763,17 @@ export default function BenchmarkAnalysisPage() {
           </div>
         </section>
 
-        {/* ---------- back to home ---------- */}
-        <div className="mt-10 text-center">
-          <Link
-            href="/"
-            className="text-sm text-muted hover:text-foreground transition-colors"
-          >
-            &larr; Back to home
-          </Link>
+        {/* ---------- related links ---------- */}
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <Link href="/" className="text-sm text-muted hover:text-foreground transition-colors">&larr; Home</Link>
+          <span className="text-card-border">|</span>
+          <Link href="/story" className="text-sm text-muted hover:text-foreground transition-colors">The Story</Link>
+          <span className="text-card-border">|</span>
+          <Link href="/tools" className="text-sm text-muted hover:text-foreground transition-colors">All Tools</Link>
+          <span className="text-card-border">|</span>
+          <Link href="/quiz" className="text-sm text-muted hover:text-foreground transition-colors">Quiz</Link>
+          <span className="text-card-border">|</span>
+          <Link href="/guides/setup" className="text-sm text-muted hover:text-foreground transition-colors">Setup Guide</Link>
         </div>
       </article>
     </>
