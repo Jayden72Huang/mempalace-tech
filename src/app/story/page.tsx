@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "How Milla Jovovich Built MemPalace — The Full Story",
   description:
-    "The Resident Evil actress spent months coding an AI memory system with developer Ben Sigman. It scored 100% on industry benchmarks. Here's the complete story.",
+    "Why does Milla Jovovich have a GitHub? She and Ben Sigman built MemPalace with Claude Code. 7000+ stars in 48h. The full origin story.",
   alternates: { canonical: "https://www.mempalace.tech/story" },
   openGraph: {
     title: "How Milla Jovovich Built MemPalace — The Full Story",

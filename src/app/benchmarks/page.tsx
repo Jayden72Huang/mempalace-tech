@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "MemPalace Benchmark Analysis — Is 100% LongMemEval Real?",
   description:
-    "Independent analysis of MemPalace's benchmark claims. We examine the 100% LongMemEval score, methodology concerns, and what the numbers actually mean.",
+    "Is MemPalace's 100% LongMemEval score real? Raw score is 96.6%. We fact-check every claim, including AAAK compression and LoCoMo methodology.",
   alternates: { canonical: "https://www.mempalace.tech/benchmarks" },
   openGraph: {
     title: "MemPalace Benchmark Analysis — Is 100% Real?",

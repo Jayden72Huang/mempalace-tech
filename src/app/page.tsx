@@ -6,7 +6,7 @@ import QuizTeaser from "@/components/QuizTeaser";
 export const metadata: Metadata = {
   title: "MemPalace — Milla Jovovich's AI Memory System",
   description:
-    "Milla Jovovich built an AI memory system with 7000+ stars. The story, benchmark controversy, and how it works.",
+    "Milla Jovovich built MemPalace on GitHub — first 100% LongMemEval score. Free, local, MIT. The story, benchmark controversy & setup guide.",
   keywords: [
     "mempalace",
     "milla jovovich",
