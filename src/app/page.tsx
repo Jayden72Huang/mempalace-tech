@@ -463,50 +463,47 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ======================== NEWSLETTER ======================== */}
+      {/* ======================== CTA + NEWSLETTER (COMBINED) ======================== */}
       <section className="border-t border-card-border py-16 sm:py-24">
-        <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
-          <p className="text-sm font-medium uppercase tracking-widest text-accent">Stay updated</p>
-          <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">AI Memory System Weekly</h2>
-          <p className="mt-3 text-muted">
-            MemPalace updates, AI memory framework news, benchmark breakdowns. One email per week, no spam.
-          </p>
-          <form
-            action="https://ai-memory-weekly.beehiiv.com/subscribe"
-            method="post"
-            target="_blank"
-            className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
-          >
-            <input
-              type="email"
-              name="email"
-              placeholder="your@email.com"
-              required
-              className="w-full max-w-xs rounded-full border border-card-border bg-card px-5 py-3 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none sm:w-auto"
-            />
-            <button
-              type="submit"
-              className="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
-            >
-              Subscribe
-            </button>
-          </form>
-          <p className="mt-3 text-xs text-muted">Free. Unsubscribe anytime. No spam, ever.</p>
-        </div>
-      </section>
-
-      {/* ======================== CTA ======================== */}
-      <section className="border-t border-card-border py-16 sm:py-24">
-        <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Try MemPalace Yourself</h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted">Free, open-source, installs in under a minute. See if the hype is justified.</p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/guides/setup" className="inline-flex items-center rounded-full bg-accent px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-accent-hover">
-              Setup Guide &rarr;
-            </Link>
-            <a href="https://github.com/milla-jovovich/mempalace" target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-full border border-card-border px-6 py-3 text-base font-semibold text-foreground transition-colors hover:bg-card">
-              View on GitHub &#8599;
-            </a>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="grid gap-8 lg:grid-cols-2">
+            {/* Left: Try it */}
+            <div className="rounded-2xl border border-card-border bg-card p-8 text-center sm:p-10">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Try MemPalace Yourself</h2>
+              <p className="mt-3 text-muted">Free, open-source, installs in under a minute. See if the hype is justified.</p>
+              <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+                <Link href="/guides/setup" className="inline-flex items-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover">
+                  Setup Guide &rarr;
+                </Link>
+                <a href="https://github.com/milla-jovovich/mempalace" target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-full border border-card-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-card">
+                  GitHub &#8599;
+                </a>
+              </div>
+            </div>
+            {/* Right: Newsletter */}
+            <div className="rounded-2xl border border-accent/20 bg-gradient-to-br from-accent/10 via-card to-card p-8 text-center sm:p-10">
+              <p className="text-sm font-medium uppercase tracking-widest text-accent">Weekly newsletter</p>
+              <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">AI Memory System Weekly</h2>
+              <p className="mt-3 text-muted">Framework updates, benchmark news, controversy breakdowns. One email/week.</p>
+              <form
+                action="https://ai-memory-weekly.beehiiv.com/subscribe"
+                method="post"
+                target="_blank"
+                className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
+              >
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                  className="w-full max-w-xs rounded-full border border-card-border bg-background px-5 py-3 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none sm:w-auto"
+                />
+                <button type="submit" className="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover">
+                  Subscribe
+                </button>
+              </form>
+              <p className="mt-3 text-xs text-muted">Free. No spam. Unsubscribe anytime.</p>
+            </div>
           </div>
         </div>
       </section>
