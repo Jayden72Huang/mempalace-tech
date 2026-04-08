@@ -43,6 +43,7 @@ export const metadata: Metadata = {
     description:
       "The independent resource hub for MemPalace, the AI memory system that scored 100% on LongMemEval.",
   },
+  other: { "google-adsense-account": "ca-pub-7779254174392960" },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.mempalace.tech" },
 };
