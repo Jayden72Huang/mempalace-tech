@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import QuizTeaser from "@/components/QuizTeaser";
+import QuizModule from "@/components/QuizModule";
 
 export const metadata: Metadata = {
   title: "MemPalace — Milla Jovovich's AI Memory System",
@@ -232,6 +232,71 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ======================== SOCIAL PROOF — TWEETS ======================== */}
+      <section className="border-t border-card-border py-16 sm:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">What People Are Saying</h2>
+          <p className="mt-3 text-muted">The internet reacted. Here are some highlights.</p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                name: "Ben Sigman",
+                handle: "@bensig",
+                text: "My friend Milla Jovovich and I spent months building MemPalace with Claude Code. First perfect score on LongMemEval. 5,400 GitHub stars in 24 hours.",
+                metric: "1.5M+ impressions",
+                color: "border-accent/30",
+              },
+              {
+                name: "Brian Roemmele",
+                handle: "@BrianRoemmele",
+                text: "We tested MemPalace at The Zero-Human Company and deployed it to 79 employees. This is a masterpiece.",
+                metric: "AI industry KOL",
+                color: "border-success/30",
+              },
+              {
+                name: "Wayne Sutton",
+                handle: "@WayneSutton",
+                text: "Milla Jovovich launching an AI memory system was NOT on my 2026 bingo card.",
+                metric: "Viral reaction",
+                color: "border-warning/30",
+              },
+              {
+                name: "HackerNews comment",
+                handle: "denysvitali",
+                text: "Yes, that Milla Jovovich (Resident Evil actress). This was definitely not on my 2026 Bingo Card. Missed opportunity to call it Resident Eval.",
+                metric: "Top HN comment",
+                color: "border-info/30",
+              },
+              {
+                name: "Community reaction",
+                handle: "@am_will",
+                text: "Milla Jovovich has a GitHub. She's co-developed the highest-scoring AI memory system. What a boss.",
+                metric: "Viral tweet",
+                color: "border-accent/30",
+              },
+              {
+                name: "Penfield Labs",
+                handle: "Substack",
+                text: "None of the benchmark scores are real... the LongMemEval 100% was achieved after targeted fixes on specific failing questions.",
+                metric: "Critical analysis",
+                color: "border-warning/30",
+              },
+            ].map((tweet, i) => (
+              <div key={i} className={`rounded-xl border ${tweet.color} bg-card p-5`}>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-semibold text-foreground text-sm">{tweet.name}</p>
+                    <p className="text-xs text-muted">{tweet.handle}</p>
+                  </div>
+                  <span className="rounded-full bg-card-border px-2 py-0.5 text-[10px] text-muted">{tweet.metric}</span>
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-muted">&ldquo;{tweet.text}&rdquo;</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ======================== HOW IT WORKS (CONCISE) ======================== */}
       <section className="border-t border-card-border py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -293,8 +358,71 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ======================== QUIZ TEASER ======================== */}
-      <QuizTeaser />
+      {/* ======================== QUIZ — INLINE ======================== */}
+      <section className="border-t border-card-border">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="pt-16 sm:pt-24 text-center">
+            <p className="text-sm font-medium uppercase tracking-widest text-accent">1-minute interactive tool</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Which AI Memory Framework Fits You?</h2>
+            <p className="mx-auto mt-3 max-w-lg text-muted">7 quick questions. Personalized recommendation with cost estimate. No signup needed.</p>
+          </div>
+          <QuizModule />
+        </div>
+      </section>
+
+      {/* ======================== GITHUB PULSE ======================== */}
+      <section className="border-t border-card-border py-16 sm:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">GitHub Pulse</h2>
+          <p className="mt-3 text-muted">What&apos;s happening in the MemPalace repository right now.</p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { label: "GitHub Stars", value: "7,100+", sub: "Growing ~1K/day", icon: "\u2B50" },
+              { label: "Forks", value: "730+", sub: "Active community", icon: "\u{1F500}" },
+              { label: "Open Issues", value: "52", sub: "Feature requests + bugs", icon: "\u{1F4AC}" },
+              { label: "Days Since Launch", value: "3", sub: "April 5, 2026", icon: "\u{1F680}" },
+            ].map((s) => (
+              <div key={s.label} className="rounded-xl border border-card-border bg-card p-5 text-center">
+                <span className="text-2xl">{s.icon}</span>
+                <p className="mt-2 text-2xl font-bold text-accent">{s.value}</p>
+                <p className="text-sm font-medium text-foreground">{s.label}</p>
+                <p className="mt-1 text-xs text-muted">{s.sub}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 rounded-xl border border-card-border bg-card p-5">
+            <h3 className="font-semibold text-foreground">Hottest Issues Right Now</h3>
+            <div className="mt-3 space-y-2">
+              {[
+                { num: "#59", title: "Import support for Cursor, Copilot, Codex, Windsurf", tag: "feature" },
+                { num: "#50", title: "Multilingual search support (non-English memories)", tag: "feature" },
+                { num: "#47", title: "UnicodeEncodeError crash on Windows", tag: "bug" },
+                { num: "#37", title: "Chinese community deep analysis & discussion", tag: "community" },
+                { num: "#29", title: "Benchmark methodology questions", tag: "discussion" },
+              ].map((issue) => (
+                <a
+                  key={issue.num}
+                  href={`https://github.com/milla-jovovich/mempalace/issues/${issue.num.slice(1)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between rounded-lg border border-card-border px-4 py-2.5 text-sm transition-colors hover:border-accent/50"
+                >
+                  <span className="text-muted">
+                    <span className="font-mono text-accent">{issue.num}</span>{" "}
+                    <span className="text-foreground">{issue.title}</span>
+                  </span>
+                  <span className={`rounded-full px-2 py-0.5 text-[10px] ${
+                    issue.tag === "bug" ? "bg-warning/15 text-warning" :
+                    issue.tag === "feature" ? "bg-accent/15 text-accent" :
+                    issue.tag === "community" ? "bg-success/15 text-success" :
+                    "bg-info/15 text-info"
+                  }`}>{issue.tag}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ======================== QUICK LINKS ======================== */}
       <section className="border-t border-card-border py-16 sm:py-24">
@@ -332,6 +460,38 @@ export default function HomePage() {
               </details>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ======================== NEWSLETTER ======================== */}
+      <section className="border-t border-card-border py-16 sm:py-24">
+        <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
+          <p className="text-sm font-medium uppercase tracking-widest text-accent">Stay updated</p>
+          <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Follow the MemPalace Story</h2>
+          <p className="mt-3 text-muted">
+            Benchmark updates, new features, controversy developments. One email per week, no spam.
+          </p>
+          <form
+            action={`https://buttondown.com/api/emails/embed-subscribe/mempalace`}
+            method="post"
+            target="popupwindow"
+            className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+              className="w-full max-w-xs rounded-full border border-card-border bg-card px-5 py-3 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none sm:w-auto"
+            />
+            <button
+              type="submit"
+              className="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
+            >
+              Subscribe
+            </button>
+          </form>
+          <p className="mt-3 text-xs text-muted">Free. Unsubscribe anytime. No spam, ever.</p>
         </div>
       </section>
 
