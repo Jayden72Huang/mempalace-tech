@@ -366,7 +366,7 @@ export default function HomePage() {
             <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Which AI Memory Framework Fits You?</h2>
             <p className="mx-auto mt-3 max-w-lg text-muted">7 quick questions. Personalized recommendation with cost estimate. No signup needed.</p>
           </div>
-          <QuizModule />
+          <QuizModule skipIntro />
         </div>
       </section>
 

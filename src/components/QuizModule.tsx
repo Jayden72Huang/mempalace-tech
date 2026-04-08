@@ -192,9 +192,9 @@ function getCostEstimate(key: FrameworkKey, budget: string, history: string): { 
 /*  Component                                                          */
 /* ------------------------------------------------------------------ */
 
-export default function QuizModule({ initialResult }: { initialResult?: string }) {
+export default function QuizModule({ initialResult, skipIntro }: { initialResult?: string; skipIntro?: boolean }) {
   const [phase, setPhase] = useState<"intro" | "questions" | "results">(
-    initialResult ? "results" : "intro"
+    initialResult ? "results" : skipIntro ? "questions" : "intro"
   );
   const [currentQ, setCurrentQ] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
