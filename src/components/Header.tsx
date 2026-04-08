@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navItems = [
@@ -18,7 +19,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-card-border bg-background/80 backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <Link href="/" className="flex items-center gap-2 text-lg font-bold tracking-tight">
-          <span className="text-accent">&#9670;</span>
+          <Image src="/logo.svg" alt="MemPalace logo" width={28} height={28} className="shrink-0" />
           <span>MemPalace</span>
           <span className="rounded bg-accent/15 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent">.tech</span>
         </Link>
