@@ -3,11 +3,11 @@
 import { useEffect, useRef } from "react";
 
 export default function AdsterraNative() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const loaded = useRef(false);
 
   useEffect(() => {
-    if (loaded.current || !containerRef.current) return;
+    if (loaded.current || !wrapperRef.current) return;
     loaded.current = true;
 
     const script = document.createElement("script");
@@ -15,15 +15,16 @@ export default function AdsterraNative() {
     script.setAttribute("data-cfasync", "false");
     script.src =
       "https://pl29097782.profitablecpmratenetwork.com/868a1c36f4e2500781acb167bc3c6a08/invoke.js";
-    containerRef.current.appendChild(script);
+    // Adsterra expects the script BEFORE the container div as siblings
+    wrapperRef.current.insertBefore(
+      script,
+      wrapperRef.current.firstChild
+    );
   }, []);
 
   return (
-    <div className="my-8">
-      <div
-        ref={containerRef}
-        id="container-868a1c36f4e2500781acb167bc3c6a08"
-      />
+    <div ref={wrapperRef} className="my-8">
+      <div id="container-868a1c36f4e2500781acb167bc3c6a08" />
     </div>
   );
 }
