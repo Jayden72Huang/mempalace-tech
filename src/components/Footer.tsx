@@ -32,7 +32,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-muted">Friends</h3>
+            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-muted">Other Tools</h3>
             <ul className="space-y-2 text-sm">
               <li><a href="https://bazi-calculator.app" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-foreground transition-colors">Bazi Calculator</a></li>
               <li><a href="https://www.impostergame.pro/" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-foreground transition-colors">Imposter Game</a></li>
