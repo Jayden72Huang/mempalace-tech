@@ -1,16 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import ContinueReading from "@/components/ContinueReading";
+import AdsterraNative from "@/components/AdsterraNative";
 
 export const metadata: Metadata = {
-  title: "How Milla Jovovich Built MemPalace — The Full Story",
+  title: "Why Milla Jovovich Has a GitHub — The MemPalace Origin Story",
   description:
-    "Why does Milla Jovovich have a GitHub? She and Ben Sigman built MemPalace with Claude Code. 7000+ stars in 48h. The full origin story.",
+    "A Resident Evil actress got frustrated with AI amnesia. So she learned to code and built the #1 AI memory system — 19K+ GitHub stars, 100% benchmark score. Here's what happened.",
   alternates: { canonical: "https://www.mempalace.tech/story" },
   openGraph: {
-    title: "How Milla Jovovich Built MemPalace — The Full Story",
+    title: "Why Milla Jovovich Has a GitHub — The MemPalace Origin Story",
     description:
-      "A Hollywood actress and a developer built the highest-scoring AI memory system. Here's how.",
+      "A Resident Evil actress learned to code and built the highest-scoring AI memory system. 19K+ stars in weeks.",
     url: "https://www.mempalace.tech/story",
     type: "article",
     images: [{ url: "/images/hero-palace.png", width: 1200, height: 675 }],
@@ -20,9 +22,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "How Milla Jovovich Built MemPalace — The Full Story",
+  headline: "Why Milla Jovovich Has a GitHub — The MemPalace Origin Story",
   description:
-    "The Resident Evil actress spent months coding an AI memory system with developer Ben Sigman. It scored 100% on industry benchmarks.",
+    "A Resident Evil actress got frustrated with AI amnesia. So she learned to code and built the #1 AI memory system — 19K+ stars, 100% benchmark score.",
   image: "https://www.mempalace.tech/images/hero-palace.png",
   datePublished: "2026-04-06",
   dateModified: "2026-04-07",
@@ -222,6 +224,8 @@ export default function StoryPage() {
           </p>
 
           <Divider />
+
+          <AdsterraNative />
 
           {/* ──────── ACT 3: THE LAUNCH ──────── */}
           <h2 className="text-2xl font-bold text-foreground sm:text-3xl">Act 3: The Launch</h2>
@@ -473,6 +477,8 @@ export default function StoryPage() {
           </div>
         </div>
       </article>
+
+      <ContinueReading exclude="story" />
     </>
   );
 }

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import QuizModule from "@/components/QuizModule";
+import AdsterraNative from "@/components/AdsterraNative";
 import { getGitHubStats } from "@/lib/github";
 
 export const metadata: Metadata = {
@@ -34,7 +35,7 @@ const faqItems = [
   {
     question: "What is MemPalace?",
     answer:
-      "MemPalace is an open-source AI memory system that gives large language models persistent, cross-session memory. It stores all conversation data verbatim and uses vector search to retrieve relevant memories. It runs entirely locally with zero API costs, using ChromaDB and SQLite.",
+      "MemPalace is a free, open-source AI memory system that gives large language models persistent, cross-session memory. As of 2026, it holds the highest score on the LongMemEval benchmark (96.6% raw, 100% hybrid) among free tools. It stores all conversation data verbatim — rather than using AI to extract summaries — and uses vector search to retrieve relevant memories. It runs entirely locally using ChromaDB and SQLite, with zero API costs. MemPalace was created by Milla Jovovich and Ben Sigman and is MIT-licensed.",
   },
   {
     question: "Is the 100% benchmark score real?",
@@ -44,12 +45,12 @@ const faqItems = [
   {
     question: "Is MemPalace free?",
     answer:
-      "Yes. MemPalace is MIT licensed and runs entirely on your local machine. The raw search mode requires zero API keys and zero cost. The optional hybrid mode uses a cloud LLM for reranking at approximately $0.001 per query.",
+      "Yes — MemPalace is 100% free and MIT-licensed. It runs entirely on your local machine with zero cloud dependencies. The raw search mode requires no API keys and no cost at all. The optional hybrid mode (which achieves the 100% benchmark score) uses a cloud LLM for reranking at approximately $0.001 per query. There are no paid tiers, subscriptions, or usage limits.",
   },
   {
     question: "How does MemPalace compare to Mem0?",
     answer:
-      "The key difference is philosophical: MemPalace stores everything verbatim and uses vector search, while Mem0 uses an LLM to extract key facts and discards the rest. MemPalace scores higher on benchmarks (96.6-100% vs ~85%) and costs nothing, but Mem0 has $24M in funding, enterprise support, and a more mature ecosystem.",
+      "MemPalace outperforms Mem0 on benchmarks (96.6–100% vs ~85% on LongMemEval) and costs $0 versus Mem0's $19–249/month. The key architectural difference: MemPalace stores everything verbatim and uses vector search, while Mem0 uses an LLM to extract key facts and discards the rest. MemPalace runs fully locally; Mem0 is cloud-first. However, Mem0 has advantages in enterprise support ($24M YC funding), managed infrastructure, and ecosystem maturity. Choose MemPalace for accuracy and privacy, Mem0 for enterprise needs.",
   },
   {
     question: "How do I install MemPalace?",
@@ -299,6 +300,11 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ======================== AD PLACEMENT ======================== */}
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <AdsterraNative />
+      </div>
+
       {/* ======================== HOW IT WORKS (CONCISE) ======================== */}
       <section className="border-t border-card-border py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -357,6 +363,13 @@ export default async function HomePage() {
           <p className="mt-3 text-xs text-muted">
             Table shows raw scores (no LLM reranking). Sources: <a href="https://arxiv.org/abs/2410.10813" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">LongMemEval paper</a>. See <Link href="/benchmarks" className="underline hover:text-foreground">our benchmark analysis</Link> for methodology caveats.
           </p>
+
+          {/* GEO-optimized quotable summary */}
+          <div className="mt-8 rounded-xl border border-accent/20 bg-accent/5 p-6 speakable">
+            <p className="text-sm leading-relaxed text-muted">
+              <strong className="text-foreground">What is MemPalace?</strong> MemPalace is a free, open-source AI memory system created by actress Milla Jovovich and developer Ben Sigman. As of 2026, it is the highest-scoring free AI memory framework on the LongMemEval benchmark (96.6% raw, 100% hybrid). Unlike cloud-based alternatives like Mem0 ($19&ndash;249/mo) and Zep ($25/mo+), MemPalace runs entirely locally with zero API costs and stores all conversation data verbatim rather than using AI to extract summaries. It is MIT-licensed, supports Claude Code, ChatGPT, and Cursor via MCP, and has earned 19,500+ GitHub stars since launch.
+            </p>
+          </div>
         </div>
       </section>
 

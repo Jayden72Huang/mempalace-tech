@@ -75,7 +75,7 @@ const tools: Tool[] = [
     tags: ["cloud", "knowledge-graph", "temporal"],
     website: "https://www.getzep.com",
     websiteLabel: "getzep.com",
-    comparePage: null,
+    comparePage: "/compare/mempalace-vs-zep",
   },
   {
     name: "Letta (MemGPT)",
@@ -88,7 +88,7 @@ const tools: Tool[] = [
     tags: ["open-source", "self-hostable", "agents"],
     website: "https://www.letta.com",
     websiteLabel: "letta.com",
-    comparePage: null,
+    comparePage: "/compare/mempalace-vs-letta",
   },
   {
     name: "Cognee",
@@ -101,7 +101,7 @@ const tools: Tool[] = [
     tags: ["enterprise", "knowledge-graph", "connectors"],
     website: "https://www.cognee.ai",
     websiteLabel: "cognee.ai",
-    comparePage: null,
+    comparePage: "/compare/mempalace-vs-cognee",
   },
   {
     name: "SuperMemory",
@@ -114,7 +114,7 @@ const tools: Tool[] = [
     tags: ["cloud", "RAG", "graph"],
     website: "https://supermemory.ai",
     websiteLabel: "supermemory.ai",
-    comparePage: null,
+    comparePage: "/compare/mempalace-vs-supermemory",
   },
   {
     name: "LangMem",
@@ -127,7 +127,7 @@ const tools: Tool[] = [
     tags: ["open-source", "LangGraph", "lightweight"],
     website: "https://github.com/langchain-ai/langmem",
     websiteLabel: "GitHub",
-    comparePage: null,
+    comparePage: "/compare/mempalace-vs-langmem",
   },
   {
     name: "Hindsight",

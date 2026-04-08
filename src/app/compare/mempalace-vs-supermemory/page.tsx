@@ -4,32 +4,33 @@ import Image from "next/image";
 import ContinueReading from "@/components/ContinueReading";
 
 export const metadata: Metadata = {
-  title: "MemPalace vs Mem0 (2026): $0 vs $249/mo — Which AI Memory Wins?",
+  title: "MemPalace vs SuperMemory (2026): 96.6% vs 81.6% — Full Comparison",
   description:
-    "100% vs 85% on LongMemEval. Local-first vs cloud. MIT license vs proprietary. We compare benchmarks, pricing & architecture — and tell you which to pick.",
-  alternates: { canonical: "https://www.mempalace.tech/compare/mempalace-vs-mem0" },
+    "96.6% vs 81.6% on LongMemEval. Local-first vs cloud. MIT license vs free tier. We compare benchmarks, pricing & architecture — and tell you which to pick.",
+  alternates: { canonical: "https://www.mempalace.tech/compare/mempalace-vs-supermemory" },
   keywords: [
-    "mempalace vs mem0",
-    "mem0 alternative",
+    "mempalace vs supermemory",
+    "supermemory alternative",
     "ai memory comparison",
-    "mem0 vs mempalace",
+    "supermemory vs mempalace",
     "ai memory system",
     "LongMemEval benchmark",
     "persistent ai memory",
+    "memory graph RAG",
   ],
   openGraph: {
-    title: "MemPalace vs Mem0 (2026): $0 vs $249/mo — Which AI Memory Wins?",
-    description: "100% vs 85% on LongMemEval. Local-first vs cloud. Full benchmark, pricing & architecture comparison.",
-    url: "https://www.mempalace.tech/compare/mempalace-vs-mem0",
+    title: "MemPalace vs SuperMemory (2026): 96.6% vs 81.6% — Full Comparison",
+    description: "96.6% vs 81.6% on LongMemEval. Local-first vs cloud. Full benchmark, pricing & architecture comparison.",
+    url: "https://www.mempalace.tech/compare/mempalace-vs-supermemory",
     type: "article",
-    images: [{ url: "/images/comparison.png", width: 1200, height: 675, alt: "MemPalace vs Mem0 comparison" }],
+    images: [{ url: "/images/comparison.png", width: 1200, height: 675, alt: "MemPalace vs SuperMemory comparison" }],
     siteName: "MemPalace.tech",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "MemPalace vs Mem0 (2026): $0 vs $249/mo — Which AI Memory Wins?",
-    description: "100% vs 85% on LongMemEval. Local-first vs cloud. Full breakdown with our recommendation.",
+    title: "MemPalace vs SuperMemory (2026): 96.6% vs 81.6% — Full Comparison",
+    description: "96.6% vs 81.6% on LongMemEval. Local-first vs cloud. Full breakdown with our recommendation.",
     images: ["/images/comparison.png"],
   },
 };
@@ -41,16 +42,16 @@ const jsonLd = {
     {
       "@type": "Article",
       headline:
-        "MemPalace vs Mem0: Which AI Memory System Should You Choose in 2026?",
+        "MemPalace vs SuperMemory: Which AI Memory System Should You Choose in 2026?",
       description:
-        "In-depth comparison of MemPalace and Mem0 covering benchmarks, pricing, architecture, and features.",
+        "In-depth comparison of MemPalace and SuperMemory covering benchmarks, pricing, architecture, and features.",
       author: { "@type": "Organization", name: "MemPalace.tech" },
       publisher: { "@type": "Organization", name: "MemPalace.tech" },
-      datePublished: "2026-04-07",
-      dateModified: "2026-04-07",
+      datePublished: "2026-04-08",
+      dateModified: "2026-04-08",
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://www.mempalace.tech/compare/mempalace-vs-mem0",
+        "@id": "https://www.mempalace.tech/compare/mempalace-vs-supermemory",
       },
     },
     {
@@ -58,7 +59,7 @@ const jsonLd = {
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: "https://www.mempalace.tech" },
         { "@type": "ListItem", position: 2, name: "Compare", item: "https://www.mempalace.tech/compare" },
-        { "@type": "ListItem", position: 3, name: "MemPalace vs Mem0" },
+        { "@type": "ListItem", position: 3, name: "MemPalace vs SuperMemory" },
       ],
     },
     {
@@ -81,10 +82,10 @@ const jsonLd = {
         },
         {
           "@type": "Question",
-          name: "Can Mem0 run locally like MemPalace?",
+          name: "Can SuperMemory run locally like MemPalace?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Mem0 has an open-source version that can run locally, but many features (managed knowledge graph, hosted vector DB) are cloud-only. MemPalace is fully local by default.",
+            text: "SuperMemory is primarily a cloud-hosted service. It does not offer a fully local deployment option. MemPalace, by contrast, is designed local-first — every feature works without network access.",
           },
         },
         {
@@ -92,7 +93,7 @@ const jsonLd = {
           name: "Which system has better benchmark scores?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "MemPalace scores 100% on LongMemEval (hybrid mode) and 92.9% on ConvoMem. Mem0 scores approximately 85% on LongMemEval and 30-45% on ConvoMem.",
+            text: "MemPalace scores 100% on LongMemEval (hybrid mode) and 96.6% in raw mode. SuperMemory scores 81.6% on LongMemEval. The 15-point gap reflects MemPalace's verbatim storage advantage over SuperMemory's graph-based RAG approach.",
           },
         },
         {
@@ -100,7 +101,7 @@ const jsonLd = {
           name: "Does MemPalace work with Claude Code?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. MemPalace includes 19 MCP tools and integrates natively with Claude Code, Claude Desktop, and any MCP-compatible client.",
+            text: "Yes. MemPalace includes 19 MCP (Model Context Protocol) tools and integrates natively with Claude Code, Claude Desktop, and any MCP-compatible client.",
           },
         },
         {
@@ -108,39 +109,31 @@ const jsonLd = {
           name: "What happens to my data with each system?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "MemPalace stores everything verbatim in local SQLite and ChromaDB — your data never leaves your machine. Mem0 cloud sends data to hosted infrastructure, though the self-hosted version keeps data local.",
+            text: "MemPalace stores everything verbatim in local SQLite and ChromaDB — your data never leaves your machine. SuperMemory processes data through its cloud-hosted memory graph and RAG pipeline, meaning your data is sent to their infrastructure.",
           },
         },
         {
           "@type": "Question",
-          name: "Can I migrate from Mem0 to MemPalace?",
+          name: "How does SuperMemory's memory graph compare to MemPalace's architecture?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "There is no official migration tool yet, but since both systems use standard formats (JSON, vector embeddings), manual migration is feasible. MemPalace's MCP tools can ingest conversation data directly.",
+            text: "SuperMemory uses a graph-based memory storage with a RAG retrieval pipeline, focusing on structured relationships between memories for fast retrieval. MemPalace uses a spatial Memory Palace metaphor (Wings/Rooms/Halls/Closets/Drawers) with verbatim storage and a 4-layer retrieval stack. MemPalace preserves complete context while SuperMemory optimizes for structured relationships.",
           },
         },
         {
           "@type": "Question",
-          name: "Is MemPalace better than Mem0?",
+          name: "Is MemPalace better than SuperMemory?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "For benchmark accuracy and cost, yes — MemPalace scores 100% on LongMemEval versus Mem0's ~85%, and runs at zero cost versus $19-249/month. However, Mem0 has advantages in enterprise support, managed cloud infrastructure, and ecosystem maturity with $24M in funding and AWS partnership. The best choice depends on whether you prioritize accuracy and privacy (MemPalace) or managed services and enterprise features (Mem0).",
+            text: "For benchmark accuracy, privacy, and cost, yes — MemPalace scores 96.6% on LongMemEval versus SuperMemory's 81.6%, runs entirely locally, and is completely free under MIT license. However, SuperMemory has advantages in structured memory relationships and fast cloud-based retrieval. The best choice depends on whether you prioritize accuracy and privacy (MemPalace) or structured graph-based retrieval in the cloud (SuperMemory).",
           },
         },
         {
           "@type": "Question",
-          name: "What is the difference between MemPalace and Mem0?",
+          name: "What is the difference between MemPalace and SuperMemory?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "The fundamental difference is architectural: MemPalace stores all conversation data verbatim and uses vector search to find relevant memories, while Mem0 uses an LLM to extract key facts and discards the original text. This means MemPalace preserves full context and nuance but uses more storage, while Mem0 is more compact but risks losing information the extraction model deemed unimportant.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Should I switch from Mem0 to MemPalace?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Consider switching if you need higher accuracy (100% vs ~85% on LongMemEval), want to eliminate cloud costs ($0 vs $19-249/month), or require full data privacy (MemPalace runs locally). Stay with Mem0 if you need enterprise SLAs, managed infrastructure, or are deeply integrated with Mem0's cloud ecosystem.",
+            text: "The fundamental difference is architectural: MemPalace stores all conversation data verbatim using a spatial Memory Palace hierarchy and retrieves via a 4-layer stack, while SuperMemory uses a memory graph combined with a RAG pipeline to structure and retrieve memories. MemPalace preserves full context at the cost of more storage; SuperMemory focuses on structured relationships for faster retrieval but may lose nuanced details.",
           },
         },
       ],
@@ -149,41 +142,41 @@ const jsonLd = {
 };
 
 /* ---------- data for comparison table ---------- */
-type Winner = "mempalace" | "mem0" | "tie";
+type Winner = "mempalace" | "supermemory" | "tie";
 
 interface ComparisonRow {
   feature: string;
   mempalace: string;
-  mem0: string;
+  supermemory: string;
   winner: Winner;
 }
 
 const comparisonData: ComparisonRow[] = [
-  { feature: "LongMemEval Score", mempalace: "100% (hybrid) / 96.6% (raw)", mem0: "~85%", winner: "mempalace" },
-  { feature: "ConvoMem Score", mempalace: "92.9%", mem0: "30-45%", winner: "mempalace" },
-  { feature: "Pricing", mempalace: "Free (MIT)", mem0: "Free tier / $19 / $249/mo", winner: "mempalace" },
-  { feature: "Runs Locally", mempalace: "Yes, fully", mem0: "Open-source version only", winner: "mempalace" },
-  { feature: "API Keys Required", mempalace: "Optional (for reranking)", mem0: "Required for cloud", winner: "mempalace" },
-  { feature: "Storage Approach", mempalace: "Verbatim + AAAK compression", mem0: "LLM-extracted summaries", winner: "mempalace" },
-  { feature: "Knowledge Graph", mempalace: "SQLite temporal triples", mem0: "Neo4j-based (cloud)", winner: "tie" },
-  { feature: "Vector DB", mempalace: "ChromaDB (embedded)", mem0: "Qdrant (cloud)", winner: "tie" },
-  { feature: "MCP Tools", mempalace: "19 tools", mem0: "MCP support", winner: "mempalace" },
-  { feature: "Language", mempalace: "Python", mem0: "Python", winner: "tie" },
-  { feature: "License", mempalace: "MIT", mem0: "Apache 2.0", winner: "tie" },
-  { feature: "GitHub Stars", mempalace: "7,000+ (2 days)", mem0: "48,000+", winner: "mem0" },
-  { feature: "Funding", mempalace: "Open-source community", mem0: "$24M Series A (YC)", winner: "mem0" },
-  { feature: "Enterprise Support", mempalace: "Community", mem0: "Yes", winner: "mem0" },
-  { feature: "Embedding Model", mempalace: "all-MiniLM-L6-v2 / bge-large", mem0: "Cloud-hosted", winner: "tie" },
+  { feature: "LongMemEval Score", mempalace: "100% (hybrid) / 96.6% (raw)", supermemory: "81.6%", winner: "mempalace" },
+  { feature: "Pricing", mempalace: "Free (MIT)", supermemory: "Free tier available", winner: "mempalace" },
+  { feature: "Runs Locally", mempalace: "Yes, fully", supermemory: "No (cloud-hosted)", winner: "mempalace" },
+  { feature: "Deployment", mempalace: "Local-first", supermemory: "Cloud", winner: "mempalace" },
+  { feature: "Storage Approach", mempalace: "Verbatim + AAAK compression", supermemory: "Graph-based memory storage", winner: "mempalace" },
+  { feature: "Retrieval Method", mempalace: "4-layer stack (L0-L3)", supermemory: "RAG pipeline", winner: "mempalace" },
+  { feature: "Memory Organization", mempalace: "Wings/Rooms/Halls/Closets/Drawers", supermemory: "Memory graph relationships", winner: "tie" },
+  { feature: "Data Privacy", mempalace: "Fully local, never leaves machine", supermemory: "Cloud-processed", winner: "mempalace" },
+  { feature: "MCP Tools", mempalace: "19 tools", supermemory: "Not specified", winner: "mempalace" },
+  { feature: "API Keys Required", mempalace: "Optional (for reranking)", supermemory: "Required for cloud", winner: "mempalace" },
+  { feature: "Vector DB", mempalace: "ChromaDB (embedded)", supermemory: "Cloud-hosted", winner: "tie" },
+  { feature: "License", mempalace: "MIT", supermemory: "Proprietary (free tier)", winner: "mempalace" },
+  { feature: "Language", mempalace: "Python", supermemory: "N/A (cloud service)", winner: "tie" },
+  { feature: "Retrieval Speed", mempalace: "Local (sub-second)", supermemory: "Fast (cloud-optimized)", winner: "tie" },
+  { feature: "Embedding Model", mempalace: "all-MiniLM-L6-v2 / bge-large", supermemory: "Cloud-hosted", winner: "tie" },
 ];
 
-function winnerClass(winner: Winner, side: "mempalace" | "mem0"): string {
+function winnerClass(winner: Winner, side: "mempalace" | "supermemory"): string {
   if (winner === side) return "text-success font-semibold";
   if (winner === "tie") return "text-foreground";
   return "text-muted";
 }
 
 /* ========== PAGE ========== */
-export default function MemPalaceVsMem0Page() {
+export default function MemPalaceVsSuperMemoryPage() {
   return (
     <>
       {/* JSON-LD */}
@@ -197,29 +190,30 @@ export default function MemPalaceVsMem0Page() {
         <nav className="mb-8 text-sm text-muted" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
           <span className="mx-2">/</span>
-          <span className="text-foreground">MemPalace vs Mem0</span>
+          <span className="text-foreground">MemPalace vs SuperMemory</span>
         </nav>
 
         {/* ---------- H1 ---------- */}
         <h1 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-          MemPalace vs Mem0: Which AI Memory System Should You Choose in{" "}
+          MemPalace vs SuperMemory: Which AI Memory System Should You Choose in{" "}
           <span className="text-accent">2026</span>?
         </h1>
         <p className="mt-4 text-lg text-muted leading-relaxed max-w-3xl">
-          Two open-source AI memory frameworks. One stores everything verbatim and scores
-          100% on LongMemEval. The other has $24M in funding and 48k GitHub stars.
+          Two AI memory systems with different philosophies. One stores everything
+          verbatim and scores 96.6% on LongMemEval. The other combines a memory graph
+          with RAG for structured retrieval at 81.6%.
           Here is everything you need to decide.
         </p>
 
         <p className="mt-6 rounded-lg border border-accent/20 bg-accent/5 p-4 text-sm leading-relaxed text-muted speakable">
-          <strong className="text-foreground">MemPalace vs Mem0:</strong> MemPalace is a free, local-first AI memory system that scores 100% on LongMemEval by storing conversations verbatim. Mem0 is a $24M-funded cloud platform scoring ~85% that uses LLM extraction to decide what to remember. MemPalace costs $0/year; Mem0 costs $19-249/month. Both are open-source, but MemPalace runs entirely locally while Mem0&apos;s advanced features require cloud access.
+          <strong className="text-foreground">MemPalace vs SuperMemory:</strong> MemPalace is a free, local-first AI memory system that scores 96.6% on LongMemEval (100% in hybrid mode) by storing conversations verbatim. SuperMemory combines a memory graph with a RAG pipeline for structured retrieval, scoring 81.6% on LongMemEval. MemPalace is MIT-licensed and runs entirely locally; SuperMemory is a cloud-hosted service with a free tier. MemPalace uses a spatial Memory Palace architecture with 19 MCP tools, while SuperMemory focuses on fast structured memory relationships.
         </p>
 
         {/* Comparison hero image */}
         <div className="mt-8 overflow-hidden rounded-xl border border-card-border">
           <Image
             src="/images/comparison.png"
-            alt="MemPalace vs Mem0 — local crystal palace versus cloud server farm comparison"
+            alt="MemPalace vs SuperMemory — local crystal palace versus cloud memory graph comparison"
             width={1200}
             height={675}
             className="w-full"
@@ -242,7 +236,7 @@ export default function MemPalaceVsMem0Page() {
               <ul className="space-y-2 text-sm text-muted leading-relaxed">
                 <li className="flex gap-2">
                   <span className="text-success mt-0.5 shrink-0">&#10003;</span>
-                  You want <strong className="text-foreground">maximum accuracy</strong> &mdash; 100% LongMemEval
+                  You want <strong className="text-foreground">maximum accuracy</strong> &mdash; 96.6% raw / 100% hybrid on LongMemEval
                 </li>
                 <li className="flex gap-2">
                   <span className="text-success mt-0.5 shrink-0">&#10003;</span>
@@ -250,7 +244,7 @@ export default function MemPalaceVsMem0Page() {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-success mt-0.5 shrink-0">&#10003;</span>
-                  <strong className="text-foreground">Zero cost</strong>, no vendor lock-in
+                  <strong className="text-foreground">Zero cost</strong>, MIT license, no vendor lock-in
                 </li>
                 <li className="flex gap-2">
                   <span className="text-success mt-0.5 shrink-0">&#10003;</span>
@@ -259,27 +253,27 @@ export default function MemPalaceVsMem0Page() {
               </ul>
             </div>
 
-            {/* Mem0 card */}
+            {/* SuperMemory card */}
             <div className="rounded-lg border border-card-border bg-card p-6 border-l-4 border-l-info">
               <h3 className="text-lg font-semibold text-info mb-3">
-                Choose Mem0 if&hellip;
+                Choose SuperMemory if&hellip;
               </h3>
               <ul className="space-y-2 text-sm text-muted leading-relaxed">
                 <li className="flex gap-2">
                   <span className="text-info mt-0.5 shrink-0">&#10003;</span>
-                  You want a <strong className="text-foreground">managed cloud service</strong>
+                  You want <strong className="text-foreground">structured memory relationships</strong> via graph
                 </li>
                 <li className="flex gap-2">
                   <span className="text-info mt-0.5 shrink-0">&#10003;</span>
-                  <strong className="text-foreground">Ecosystem maturity</strong> matters most
+                  <strong className="text-foreground">Cloud-hosted convenience</strong> matters most
                 </li>
                 <li className="flex gap-2">
                   <span className="text-info mt-0.5 shrink-0">&#10003;</span>
-                  You need <strong className="text-foreground">enterprise support</strong> and SLAs
+                  You prefer a <strong className="text-foreground">RAG pipeline</strong> approach to retrieval
                 </li>
                 <li className="flex gap-2">
                   <span className="text-info mt-0.5 shrink-0">&#10003;</span>
-                  $24M funded, <strong className="text-foreground">Y Combinator backed</strong>
+                  You want to get started quickly with a <strong className="text-foreground">free tier</strong>
                 </li>
               </ul>
             </div>
@@ -298,7 +292,7 @@ export default function MemPalaceVsMem0Page() {
                 <tr className="bg-card text-left">
                   <th className="px-4 py-3 font-semibold text-muted">Feature</th>
                   <th className="px-4 py-3 font-semibold text-accent">MemPalace</th>
-                  <th className="px-4 py-3 font-semibold text-info">Mem0</th>
+                  <th className="px-4 py-3 font-semibold text-info">SuperMemory</th>
                 </tr>
               </thead>
               <tbody>
@@ -313,8 +307,8 @@ export default function MemPalaceVsMem0Page() {
                     <td className={`px-4 py-3 ${winnerClass(row.winner, "mempalace")}`}>
                       {row.mempalace}
                     </td>
-                    <td className={`px-4 py-3 ${winnerClass(row.winner, "mem0")}`}>
-                      {row.mem0}
+                    <td className={`px-4 py-3 ${winnerClass(row.winner, "supermemory")}`}>
+                      {row.supermemory}
                     </td>
                   </tr>
                 ))}
@@ -359,29 +353,31 @@ export default function MemPalaceVsMem0Page() {
               </div>
             </div>
 
-            {/* Mem0 arch */}
+            {/* SuperMemory arch */}
             <div className="rounded-lg border border-card-border bg-card p-6">
               <h3 className="text-lg font-semibold text-info mb-3">
-                Mem0 &mdash; Extracted Memory Graph
+                SuperMemory &mdash; Memory Graph + RAG
               </h3>
               <p className="text-sm text-muted leading-relaxed mb-4">
-                Mem0 takes a different approach: it uses an{" "}
-                <strong className="text-foreground">LLM to extract key facts</strong> from
-                conversations and stores them in a vector database plus a knowledge graph.
-                It is more opinionated about <em>what</em> to remember.
+                SuperMemory takes a <strong className="text-foreground">graph-based approach</strong> to
+                memory storage, building structured relationships between memories. It
+                combines this memory graph with a{" "}
+                <strong className="text-foreground">RAG (Retrieval-Augmented Generation) pipeline</strong>{" "}
+                for fast, structured retrieval.
               </p>
               <p className="text-sm text-muted leading-relaxed mb-4">
-                The cloud-first architecture offers{" "}
-                <strong className="text-foreground">managed infrastructure</strong> with
-                Neo4j for the knowledge graph and Qdrant for vector search.
-                A self-hosted option exists but lacks some cloud features.
+                The architecture is <strong className="text-foreground">cloud-hosted</strong>,
+                focusing on speed and structured memory relationships rather than verbatim
+                storage. The RAG pipeline enables efficient retrieval across the memory
+                graph, though the graph abstraction can lose nuanced context that
+                verbatim storage preserves.
               </p>
               <div className="flex flex-wrap gap-2 text-xs">
-                <span className="rounded bg-info/15 px-2 py-1 text-info">Neo4j</span>
-                <span className="rounded bg-info/15 px-2 py-1 text-info">Qdrant</span>
-                <span className="rounded bg-info/15 px-2 py-1 text-info">LLM Extraction</span>
-                <span className="rounded bg-info/15 px-2 py-1 text-info">Cloud API</span>
-                <span className="rounded bg-info/15 px-2 py-1 text-info">MCP Support</span>
+                <span className="rounded bg-info/15 px-2 py-1 text-info">Memory Graph</span>
+                <span className="rounded bg-info/15 px-2 py-1 text-info">RAG Pipeline</span>
+                <span className="rounded bg-info/15 px-2 py-1 text-info">Cloud-hosted</span>
+                <span className="rounded bg-info/15 px-2 py-1 text-info">Structured Retrieval</span>
+                <span className="rounded bg-info/15 px-2 py-1 text-info">Free Tier</span>
               </div>
             </div>
           </div>
@@ -389,11 +385,13 @@ export default function MemPalaceVsMem0Page() {
           <div className="mt-6 rounded-lg border border-accent/30 bg-accent/5 p-5">
             <p className="text-sm text-muted leading-relaxed">
               <strong className="text-accent">Key philosophical difference:</strong>{" "}
-              MemPalace stores everything then makes it findable through spatial organization
-              and multi-layer retrieval. Mem0 uses AI to decide what is worth keeping,
-              trading completeness for a smaller memory footprint. The benchmark results
-              suggest the &ldquo;store everything&rdquo; approach yields significantly
-              higher recall.
+              MemPalace stores everything verbatim then makes it findable through spatial
+              organization and multi-layer retrieval. SuperMemory builds a memory graph
+              with structured relationships and uses a RAG pipeline to retrieve relevant
+              context. The benchmark results suggest the &ldquo;store everything&rdquo;
+              approach yields significantly higher recall &mdash; 96.6% vs 81.6% on
+              LongMemEval &mdash; while the graph-based approach offers faster structured
+              lookups at the cost of some accuracy.
             </p>
           </div>
         </section>
@@ -424,63 +422,60 @@ export default function MemPalaceVsMem0Page() {
                 <p className="text-xs text-muted mt-1">Raw mode (zero API cost)</p>
               </div>
               <div className="rounded-lg border border-card-border bg-card p-5">
-                <p className="text-xs text-muted uppercase tracking-wider mb-1">Mem0</p>
-                <p className="text-3xl font-bold text-muted">~85%</p>
-                <p className="text-xs text-muted mt-1">Cloud platform</p>
+                <p className="text-xs text-muted uppercase tracking-wider mb-1">SuperMemory</p>
+                <p className="text-3xl font-bold text-info">81.6%</p>
+                <p className="text-xs text-muted mt-1">Memory graph + RAG pipeline</p>
               </div>
             </div>
           </div>
 
-          {/* ConvoMem */}
+          {/* Score breakdown */}
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-3">
-              ConvoMem <span className="text-sm text-muted font-normal">(Salesforce Research)</span>
+              Score Breakdown
             </h3>
             <p className="text-sm text-muted leading-relaxed mb-4">
-              <a href="https://arxiv.org/abs/2406.02761" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">ConvoMem</a>, developed by Salesforce Research, evaluates conversational memory
-              systems on their ability to track user preferences, recall past exchanges,
-              and maintain consistency. It is one of the hardest benchmarks for AI memory.
+              The 15-point gap between MemPalace (96.6% raw) and SuperMemory (81.6%)
+              on LongMemEval reflects a fundamental architectural trade-off.
+              MemPalace&apos;s verbatim storage preserves every detail, ensuring high recall
+              even on nuanced, multi-hop questions. SuperMemory&apos;s graph-based approach
+              excels at structured lookups but can miss context that falls outside
+              the graph&apos;s relationship model.
             </p>
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-lg border border-card-border bg-card p-5">
-                <p className="text-xs text-muted uppercase tracking-wider mb-1">MemPalace</p>
-                <p className="text-3xl font-bold text-success">92.9%</p>
-                <p className="text-xs text-muted mt-1">Across all ConvoMem categories</p>
-              </div>
-              <div className="rounded-lg border border-card-border bg-card p-5">
-                <p className="text-xs text-muted uppercase tracking-wider mb-1">Mem0</p>
-                <p className="text-3xl font-bold text-muted">30&ndash;45%</p>
-                <p className="text-xs text-muted mt-1">Varies by category</p>
+            <div className="rounded-lg border border-card-border bg-card p-5">
+              <div className="space-y-4">
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span className="text-accent font-medium">MemPalace (raw)</span>
+                    <span className="text-success font-semibold">96.6%</span>
+                  </div>
+                  <div className="h-3 rounded-full bg-card-border overflow-hidden">
+                    <div className="h-full rounded-full bg-accent" style={{ width: "96.6%" }} />
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span className="text-info font-medium">SuperMemory</span>
+                    <span className="text-info font-semibold">81.6%</span>
+                  </div>
+                  <div className="h-3 rounded-full bg-card-border overflow-hidden">
+                    <div className="h-full rounded-full bg-info" style={{ width: "81.6%" }} />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* LoCoMo */}
-          <div>
-            <h3 className="text-xl font-semibold mb-3">
-              LoCoMo <span className="text-sm text-muted font-normal">(Long Conversation Memory)</span>
-            </h3>
-            <p className="text-sm text-muted leading-relaxed mb-4">
-              LoCoMo focuses on maintaining coherent memory across very long conversations
-              (10k+ turns). It tests a system&apos;s ability to resolve coreferences, track
-              evolving beliefs, and handle contradictions over time. MemPalace&apos;s
-              verbatim storage approach gives it a structural advantage here, since
-              no information is lost to summarization. Mem0&apos;s LLM-extraction pipeline
-              can miss nuanced context that becomes relevant later in the conversation.
-            </p>
           </div>
 
           <div className="mt-6 rounded-lg border border-card-border bg-card p-5">
             <p className="text-sm text-muted leading-relaxed">
               <strong className="text-foreground">Methodology note:</strong>{" "}
               All benchmark numbers for MemPalace come from the project&apos;s published
-              evaluation suite. Mem0 numbers are based on publicly available reports and
-              community benchmarks. Conditions may not be perfectly identical &mdash;
+              evaluation suite. SuperMemory&apos;s 81.6% score is based on publicly available
+              reports. Conditions may not be perfectly identical &mdash;
               interpret the gap directionally rather than as an exact delta.
             </p>
             <p className="mt-4 text-sm font-medium text-foreground speakable">
-              In head-to-head comparison, MemPalace outperforms Mem0 by 15 percentage points on LongMemEval and by approximately 50 percentage points on ConvoMem. These are the two most widely cited AI memory benchmarks as of April 2026.
+              In head-to-head comparison, MemPalace outperforms SuperMemory by 15 percentage points on LongMemEval (96.6% vs 81.6% in raw mode, 100% vs 81.6% in hybrid mode). Both systems have published scores, making this one of the more directly comparable matchups in the AI memory space.
             </p>
           </div>
         </section>
@@ -516,26 +511,26 @@ export default function MemPalaceVsMem0Page() {
               </ul>
             </div>
 
-            {/* Mem0 pricing */}
+            {/* SuperMemory pricing */}
             <div className="rounded-lg border border-card-border bg-card p-6 border-t-4 border-t-info">
-              <h3 className="text-lg font-semibold mb-1">Mem0</h3>
-              <p className="text-3xl font-bold text-info mb-4">$0&ndash;$249<span className="text-sm font-normal text-muted">/month</span></p>
+              <h3 className="text-lg font-semibold mb-1">SuperMemory</h3>
+              <p className="text-3xl font-bold text-info mb-4">Free<span className="text-sm font-normal text-muted"> tier available</span></p>
               <ul className="space-y-2 text-sm text-muted">
                 <li className="flex gap-2">
                   <span className="text-info shrink-0">&middot;</span>
-                  Free tier: 10K memories
+                  Free tier with usage limits
                 </li>
                 <li className="flex gap-2">
                   <span className="text-info shrink-0">&middot;</span>
-                  Pro: $19/mo (100K memories)
+                  Cloud-hosted (no self-hosting option)
                 </li>
                 <li className="flex gap-2">
                   <span className="text-info shrink-0">&middot;</span>
-                  Business: $249/mo (1M memories)
+                  Pricing may scale with usage
                 </li>
                 <li className="flex gap-2">
                   <span className="text-info shrink-0">&middot;</span>
-                  Enterprise: custom pricing + SLA
+                  See <a href="https://supermemory.ai" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">supermemory.ai</a> for current plans
                 </li>
               </ul>
             </div>
@@ -543,23 +538,26 @@ export default function MemPalaceVsMem0Page() {
 
           <div className="mt-6 rounded-lg border border-card-border bg-card p-5">
             <h4 className="text-sm font-semibold text-foreground mb-2">
-              Real-world cost scenario: 6 months of daily AI use
+              Cost Comparison: Long-term Ownership
             </h4>
             <p className="text-sm text-muted leading-relaxed">
-              Assuming daily usage generating approximately <strong className="text-foreground">19.5M tokens</strong> of
-              conversation over 6 months, here is the cost comparison:
+              MemPalace is <strong className="text-foreground">permanently free</strong> under MIT license &mdash; you
+              own the software and your data with zero ongoing costs. SuperMemory offers a free
+              tier, but as usage grows, cloud-hosted services typically introduce paid tiers.
+              With MemPalace, there are no surprises: the only optional cost is sub-penny
+              Haiku reranking at ~$0.001 per query.
             </p>
             <ul className="mt-3 space-y-2 text-sm">
               <li className="flex gap-2">
                 <span className="text-success font-semibold shrink-0">MemPalace:</span>
                 <span className="text-muted">
-                  ~$0.70/year total (optional Haiku reranking). $0 if using raw mode only.
+                  $0/year forever. ~$0.70/year if you opt into Haiku reranking.
                 </span>
               </li>
               <li className="flex gap-2">
-                <span className="text-info font-semibold shrink-0">Mem0 Cloud:</span>
+                <span className="text-info font-semibold shrink-0">SuperMemory:</span>
                 <span className="text-muted">
-                  $114&ndash;$1,494/year depending on tier, plus additional API costs for memory operations.
+                  Free tier available. Paid plans likely as usage scales beyond free limits.
                 </span>
               </li>
             </ul>
@@ -575,23 +573,23 @@ export default function MemPalaceVsMem0Page() {
             {[
               {
                 title: "You want the highest benchmark scores",
-                desc: "MemPalace leads on every public benchmark — 100% on LongMemEval and 92.9% on ConvoMem. If accuracy is your priority, the numbers speak for themselves.",
+                desc: "MemPalace leads with 96.6% on LongMemEval (raw) and 100% in hybrid mode versus SuperMemory's 81.6%. If accuracy is your top priority, the 15-point gap is decisive.",
               },
               {
                 title: "Privacy is paramount",
-                desc: "Everything stays on your local machine. SQLite databases, ChromaDB vectors, AAAK-compressed archives — none of it leaves your filesystem.",
+                desc: "Everything stays on your local machine. SQLite databases, ChromaDB vectors, AAAK-compressed archives — none of it leaves your filesystem. SuperMemory processes data in the cloud.",
               },
               {
                 title: "You don't want vendor lock-in",
-                desc: "MIT license, standard formats, no cloud dependency. You own your data and your infrastructure forever.",
+                desc: "MIT license, standard formats, no cloud dependency. You own your data and your infrastructure forever. No risk of service changes or shutdown.",
               },
               {
-                title: "You use Claude Code",
-                desc: "MemPalace was built for MCP-native workflows. Its 19 tools integrate directly with Claude Code, Claude Desktop, and any MCP client.",
+                title: "You use Claude Code or MCP clients",
+                desc: "MemPalace was built for MCP-native workflows. Its 19 tools integrate directly with Claude Code, Claude Desktop, and any MCP client. SuperMemory does not offer the same MCP integration depth.",
               },
               {
-                title: "You want zero ongoing costs",
-                desc: "No subscription, no usage tiers, no API keys required for core functionality. The only optional cost is sub-penny reranking.",
+                title: "You need verbatim memory",
+                desc: "MemPalace stores every conversation word-for-word. Graph-based systems like SuperMemory abstract memories into structured relationships, which can lose nuanced context.",
               },
             ].map((item, i) => (
               <li key={i} className="flex gap-4">
@@ -607,31 +605,31 @@ export default function MemPalaceVsMem0Page() {
           </ol>
         </section>
 
-        <section className="mt-12" aria-labelledby="when-mem0">
-          <h2 id="when-mem0" className="text-2xl font-bold mb-6">
-            When to Choose Mem0
+        <section className="mt-12" aria-labelledby="when-supermemory">
+          <h2 id="when-supermemory" className="text-2xl font-bold mb-6">
+            When to Choose SuperMemory
           </h2>
           <ol className="space-y-4">
             {[
               {
-                title: "You need enterprise support and SLAs",
-                desc: "Mem0 offers dedicated enterprise plans with guaranteed uptime, priority support, and compliance certifications — important for production workloads at scale.",
+                title: "You want structured memory relationships",
+                desc: "SuperMemory's graph-based architecture excels at building and traversing structured relationships between memories. If your use case benefits from explicit connections between concepts, the memory graph approach has merit.",
               },
               {
-                title: "You want a managed cloud solution",
-                desc: "If running infrastructure is not your strength, Mem0's hosted platform handles scaling, backups, and maintenance for you.",
+                title: "You prefer cloud-hosted convenience",
+                desc: "No local infrastructure to manage. SuperMemory handles hosting, scaling, and maintenance. Just sign up and start using it — ideal if you don't want to run anything locally.",
               },
               {
-                title: "You're building a commercial product",
-                desc: "Mem0's $24M in funding (Y Combinator backed) signals long-term viability as a vendor. Apache 2.0 licensing is also commercially friendly.",
+                title: "RAG pipeline is your preferred retrieval pattern",
+                desc: "If your team is already invested in RAG-based architectures, SuperMemory's RAG pipeline will feel familiar. The retrieval pattern integrates naturally with existing RAG workflows.",
               },
               {
-                title: "You need the broader ecosystem",
-                desc: "Mem0 has integrations with AWS Strands, various LLM providers, and a larger community of commercial users building on top of it.",
+                title: "You want to start with a free tier",
+                desc: "SuperMemory offers a free tier to get started without commitment. You can evaluate the system before deciding whether to scale up — though MemPalace is permanently free.",
               },
               {
-                title: "You're already in the Mem0 ecosystem",
-                desc: "If your team has existing Mem0 integrations and workflows, the switching cost may not be worth it — especially if enterprise support matters more than raw benchmark scores.",
+                title: "Speed of structured lookups is critical",
+                desc: "SuperMemory's graph-based retrieval is optimized for fast lookups across structured memory relationships. If your queries are well-structured and graph-traversal suits your access patterns, retrieval can be very fast.",
               },
             ].map((item, i) => (
               <li key={i} className="flex gap-4">
@@ -660,12 +658,12 @@ export default function MemPalaceVsMem0Page() {
                 a: "Yes. MemPalace is MIT-licensed and completely free to use with no restrictions. The only optional cost is approximately $0.001 per query if you enable Haiku reranking for enhanced accuracy. In raw mode, the system runs entirely on local resources at zero cost.",
               },
               {
-                q: "Can Mem0 run locally like MemPalace?",
-                a: "Mem0 has an open-source version that can be self-hosted, but many advanced features — managed knowledge graphs, hosted vector databases, and the full API platform — are cloud-only. MemPalace is designed local-first from the ground up; every feature works without network access.",
+                q: "Can SuperMemory run locally like MemPalace?",
+                a: "No. SuperMemory is a cloud-hosted service and does not offer a self-hosted or local deployment option. MemPalace is designed local-first from the ground up; every feature works without network access.",
               },
               {
                 q: "Which system has better benchmark scores?",
-                a: "MemPalace leads on all published benchmarks. It scores 100% on LongMemEval (hybrid mode) and 92.9% on ConvoMem compared to Mem0's approximately 85% and 30-45% respectively. The gap is most pronounced on conversational memory tasks.",
+                a: "MemPalace leads on LongMemEval with 100% in hybrid mode and 96.6% in raw mode, compared to SuperMemory's 81.6%. The 15-point gap in raw mode reflects MemPalace's verbatim storage advantage over SuperMemory's graph-based RAG approach.",
               },
               {
                 q: "Does MemPalace work with Claude Code?",
@@ -673,23 +671,19 @@ export default function MemPalaceVsMem0Page() {
               },
               {
                 q: "What happens to my data with each system?",
-                a: "With MemPalace, everything is stored locally in SQLite and ChromaDB — your data never leaves your machine. With Mem0 cloud, your conversation data is sent to their hosted infrastructure for processing and storage. The self-hosted Mem0 version keeps data local but requires you to manage Neo4j and Qdrant yourself.",
+                a: "With MemPalace, everything is stored locally in SQLite and ChromaDB — your data never leaves your machine. With SuperMemory, your data is processed and stored in their cloud-hosted memory graph and RAG infrastructure.",
               },
               {
-                q: "Can I migrate from Mem0 to MemPalace?",
-                a: "There is no official migration tool yet, but both systems use standard data formats. You can export your Mem0 memories as JSON and use MemPalace's MCP tools to ingest them. The community is working on streamlined migration scripts.",
+                q: "How does SuperMemory's memory graph compare to MemPalace's architecture?",
+                a: "SuperMemory builds a graph of structured relationships between memories and uses a RAG pipeline to retrieve relevant context. MemPalace uses a spatial Memory Palace hierarchy (Wings/Rooms/Halls/Closets/Drawers) with verbatim storage and a 4-layer retrieval stack (L0-L3). MemPalace preserves complete context while SuperMemory optimizes for structured relationship traversal.",
               },
               {
-                q: "Is MemPalace better than Mem0?",
-                a: "For benchmark accuracy and cost, yes — MemPalace scores 100% on LongMemEval versus Mem0's ~85%, and runs at zero cost versus $19-249/month. However, Mem0 has advantages in enterprise support, managed cloud infrastructure, and ecosystem maturity with $24M in funding and AWS partnership. The best choice depends on whether you prioritize accuracy and privacy (MemPalace) or managed services and enterprise features (Mem0).",
+                q: "Is MemPalace better than SuperMemory?",
+                a: "For benchmark accuracy, privacy, and cost, yes — MemPalace scores 96.6% on LongMemEval versus SuperMemory's 81.6%, runs entirely locally, and is completely free under MIT license. However, SuperMemory has advantages in structured memory relationships and cloud-hosted convenience. The best choice depends on whether you prioritize accuracy and privacy (MemPalace) or structured graph-based retrieval in the cloud (SuperMemory).",
               },
               {
-                q: "What is the difference between MemPalace and Mem0?",
-                a: "The fundamental difference is architectural: MemPalace stores all conversation data verbatim and uses vector search to find relevant memories, while Mem0 uses an LLM to extract key facts and discards the original text. This means MemPalace preserves full context and nuance but uses more storage, while Mem0 is more compact but risks losing information the extraction model deemed unimportant.",
-              },
-              {
-                q: "Should I switch from Mem0 to MemPalace?",
-                a: "Consider switching if you need higher accuracy (100% vs ~85% on LongMemEval), want to eliminate cloud costs ($0 vs $19-249/month), or require full data privacy (MemPalace runs locally). Stay with Mem0 if you need enterprise SLAs, managed infrastructure, or are deeply integrated with Mem0's cloud ecosystem.",
+                q: "What is the difference between MemPalace and SuperMemory?",
+                a: "The fundamental difference is architectural: MemPalace stores all conversation data verbatim using a spatial Memory Palace hierarchy and retrieves via a 4-layer stack, while SuperMemory uses a memory graph combined with a RAG pipeline to structure and retrieve memories. MemPalace preserves full context at the cost of more local storage; SuperMemory focuses on structured relationships for faster graph-based retrieval but may lose nuanced details not captured in the graph model.",
               },
             ].map((item, i) => (
               <details
@@ -735,12 +729,12 @@ export default function MemPalaceVsMem0Page() {
 
         {/* ==================== LAST UPDATED ==================== */}
         <p className="mt-12 text-center text-xs text-muted">
-          Last updated: April 7, 2026. Data sourced from official documentation, published benchmarks,
-          and public GitHub repositories.
+          Last updated: April 8, 2026. Data sourced from official documentation, published benchmarks,
+          and public repositories.
         </p>
       </article>
 
-      <ContinueReading exclude="vs-mem0" />
+      <ContinueReading exclude="vs-supermemory" />
     </>
   );
 }

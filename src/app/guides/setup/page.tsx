@@ -1,23 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CopyButton from "@/components/CopyButton";
+import ContinueReading from "@/components/ContinueReading";
 
 export const metadata: Metadata = {
-  title: "MemPalace Setup Guide — Install in 5 Minutes",
+  title: "Install MemPalace in 5 Minutes — Claude Code, ChatGPT & Cursor Guide",
   description:
-    "pip install mempalace → mempalace init → done. Step-by-step setup for Claude Code, ChatGPT, Cursor. MCP config included.",
+    "3 commands to give your AI permanent memory. pip install → init → connect. Free setup guide with MCP configs for Claude Code, ChatGPT & Cursor. No cloud account needed.",
   alternates: { canonical: "https://www.mempalace.tech/guides/setup" },
   openGraph: {
-    title: "MemPalace Setup Guide — Install in 5 Minutes",
-    description: "Step-by-step guide to install MemPalace. Works with Claude Code, ChatGPT, Cursor, and local LLMs.",
+    title: "Install MemPalace in 5 Minutes — Claude Code, ChatGPT & Cursor Guide",
+    description: "3 commands to give your AI permanent memory. Free setup with MCP configs for Claude Code, ChatGPT & Cursor.",
     url: "https://www.mempalace.tech/guides/setup",
     type: "article",
     images: [{ url: "/images/architecture.png", width: 1200, height: 675, alt: "MemPalace architecture diagram" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MemPalace Setup Guide — Install in 5 Minutes",
-    description: "Step-by-step guide to install MemPalace. Works with Claude Code, ChatGPT, Cursor, and local LLMs.",
+    title: "Install MemPalace in 5 Minutes — Claude Code, ChatGPT & Cursor Guide",
+    description: "3 commands to give your AI permanent memory. Free setup with MCP configs for Claude Code, ChatGPT & Cursor.",
   },
 };
 
@@ -809,6 +810,8 @@ mempalace mcp     # Should start the MCP server`}</CodeBlock>
           </Card>
         </section>
       </article>
+
+      <ContinueReading exclude="setup" />
     </>
   );
 }

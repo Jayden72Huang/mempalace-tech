@@ -1,23 +1,25 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContinueReading from "@/components/ContinueReading";
+import AdsterraNative from "@/components/AdsterraNative";
 
 export const metadata: Metadata = {
-  title: "MemPalace Benchmark Analysis — Is 100% LongMemEval Real?",
+  title: "Is MemPalace's 100% Score Real? We Fact-Checked Every Claim",
   description:
-    "Is MemPalace's 100% LongMemEval score real? Raw score is 96.6%. We fact-check every claim, including AAAK compression and LoCoMo methodology.",
+    "The raw LongMemEval score is actually 96.6%. We dig into the methodology, the LoCoMo controversy, AAAK compression tradeoffs, and how MemPalace compares to Mem0, Zep & Letta.",
   alternates: { canonical: "https://www.mempalace.tech/benchmarks" },
   openGraph: {
-    title: "MemPalace Benchmark Analysis — Is 100% Real?",
+    title: "Is MemPalace's 100% Score Real? We Fact-Checked Every Claim",
     description:
-      "Independent analysis of MemPalace's benchmark claims and the controversy around them.",
+      "Independent fact-check of MemPalace's benchmark claims. Raw score 96.6%, not 100%. Full methodology analysis.",
     url: "https://www.mempalace.tech/benchmarks",
     type: "article",
     images: [{ url: "/images/og-image.png", width: 1200, height: 675, alt: "MemPalace Benchmark Analysis" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MemPalace Benchmark Analysis — Is 100% Real?",
-    description: "Independent analysis of MemPalace's benchmark claims and the controversy.",
+    title: "Is MemPalace's 100% Score Real? We Fact-Checked Every Claim",
+    description: "The raw score is 96.6%. Independent analysis of every benchmark claim and the controversy.",
     images: ["/images/og-image.png"],
   },
 };
@@ -604,6 +606,8 @@ export default function BenchmarkAnalysisPage() {
           </p>
         </section>
 
+        <AdsterraNative />
+
         {/* ---------- Bottom Line ---------- */}
         <section className="mt-14">
           <h2 className="text-2xl font-bold text-foreground mb-6">
@@ -776,6 +780,8 @@ export default function BenchmarkAnalysisPage() {
           <Link href="/guides/setup" className="text-sm text-muted hover:text-foreground transition-colors">Setup Guide</Link>
         </div>
       </article>
+
+      <ContinueReading exclude="benchmarks" />
     </>
   );
 }
