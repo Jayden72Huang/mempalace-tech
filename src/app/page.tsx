@@ -130,7 +130,7 @@ export default function HomePage() {
 
             <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
               {[
-                { value: "7,000+", label: "GitHub Stars in 48h" },
+                { value: "19K+", label: "GitHub Stars" },
                 { value: "100%", label: "LongMemEval Score" },
                 { value: "$0", label: "Cost (MIT Licensed)" },
                 { value: "100%", label: "Local — No Cloud" },
@@ -377,10 +377,10 @@ export default function HomePage() {
           <p className="mt-3 text-muted">What&apos;s happening in the MemPalace repository right now.</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { label: "GitHub Stars", value: "7,100+", sub: "Growing ~1K/day", icon: "\u2B50" },
-              { label: "Forks", value: "730+", sub: "Active community", icon: "\u{1F500}" },
-              { label: "Open Issues", value: "52", sub: "Feature requests + bugs", icon: "\u{1F4AC}" },
-              { label: "Days Since Launch", value: "3", sub: "April 5, 2026", icon: "\u{1F680}" },
+              { label: "GitHub Stars", value: "19.1K+", sub: "Growing fast", icon: "\u2B50" },
+              { label: "Forks", value: "2.2K+", sub: "Active community", icon: "\u{1F500}" },
+              { label: "Watchers", value: "146", sub: "Following updates", icon: "\u{1F440}" },
+              { label: "Open Issues", value: "52+", sub: "Feature requests + bugs", icon: "\u{1F4AC}" },
             ].map((s) => (
               <div key={s.label} className="rounded-xl border border-card-border bg-card p-5 text-center">
                 <span className="text-2xl">{s.icon}</span>
