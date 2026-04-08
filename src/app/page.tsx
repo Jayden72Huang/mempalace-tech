@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import QuizTeaser from "@/components/QuizTeaser";
 
 export const metadata: Metadata = {
   title: "MemPalace — Milla Jovovich's AI Memory System",
@@ -291,6 +292,9 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+
+      {/* ======================== QUIZ TEASER ======================== */}
+      <QuizTeaser />
 
       {/* ======================== QUICK LINKS ======================== */}
       <section className="border-t border-card-border py-16 sm:py-24">

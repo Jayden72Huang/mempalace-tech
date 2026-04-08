@@ -22,6 +22,7 @@ export default function Footer() {
           <div>
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-muted">Resources</h3>
             <ul className="space-y-2 text-sm">
+              <li><Link href="/quiz" className="text-zinc-400 hover:text-foreground transition-colors">Framework Quiz</Link></li>
               <li><a href="https://github.com/milla-jovovich/mempalace" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-foreground transition-colors">GitHub Repository</a></li>
               <li><a href="https://pypi.org/project/mempalace/" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-foreground transition-colors">PyPI Package</a></li>
             </ul>
