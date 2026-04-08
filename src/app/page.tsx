@@ -467,14 +467,14 @@ export default function HomePage() {
       <section className="border-t border-card-border py-16 sm:py-24">
         <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
           <p className="text-sm font-medium uppercase tracking-widest text-accent">Stay updated</p>
-          <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Follow the MemPalace Story</h2>
+          <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">AI Memory System Weekly</h2>
           <p className="mt-3 text-muted">
-            Benchmark updates, new features, controversy developments. One email per week, no spam.
+            MemPalace updates, AI memory framework news, benchmark breakdowns. One email per week, no spam.
           </p>
           <form
-            action={`https://buttondown.com/api/emails/embed-subscribe/mempalace`}
+            action="https://ai-memory-weekly.beehiiv.com/subscribe"
             method="post"
-            target="popupwindow"
+            target="_blank"
             className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
           >
             <input
