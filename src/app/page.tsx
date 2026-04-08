@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import QuizModule from "@/components/QuizModule";
+import { getGitHubStats } from "@/lib/github";
 
 export const metadata: Metadata = {
   title: "MemPalace — Milla Jovovich's AI Memory System",
@@ -95,7 +96,8 @@ const jsonLd = {
   ],
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  const gh = await getGitHubStats();
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -130,7 +132,7 @@ export default function HomePage() {
 
             <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
               {[
-                { value: "19K+", label: "GitHub Stars" },
+                { value: gh.stars, label: "GitHub Stars" },
                 { value: "100%", label: "LongMemEval Score" },
                 { value: "$0", label: "Cost (MIT Licensed)" },
                 { value: "100%", label: "Local — No Cloud" },
@@ -377,10 +379,10 @@ export default function HomePage() {
           <p className="mt-3 text-muted">What&apos;s happening in the MemPalace repository right now.</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { label: "GitHub Stars", value: "19.1K+", sub: "Growing fast", icon: "\u2B50" },
-              { label: "Forks", value: "2.2K+", sub: "Active community", icon: "\u{1F500}" },
-              { label: "Watchers", value: "146", sub: "Following updates", icon: "\u{1F440}" },
-              { label: "Open Issues", value: "52+", sub: "Feature requests + bugs", icon: "\u{1F4AC}" },
+              { label: "GitHub Stars", value: gh.stars, sub: "Growing fast", icon: "\u2B50" },
+              { label: "Forks", value: gh.forks, sub: "Active community", icon: "\u{1F500}" },
+              { label: "Watchers", value: gh.watchers, sub: "Following updates", icon: "\u{1F440}" },
+              { label: "Open Issues", value: gh.openIssues, sub: "Feature requests + bugs", icon: "\u{1F4AC}" },
             ].map((s) => (
               <div key={s.label} className="rounded-xl border border-card-border bg-card p-5 text-center">
                 <span className="text-2xl">{s.icon}</span>
