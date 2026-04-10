@@ -41,6 +41,7 @@ export default function Footer() {
               <li><a href="https://bazi-calculator.app" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-foreground transition-colors">Bazi Calculator</a></li>
               <li><a href="https://www.impostergame.pro/" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-foreground transition-colors">Imposter Game</a></li>
               <li><a href="https://www.bojacktest.com/" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-foreground transition-colors">Bojack Test</a></li>
+              <li><a href="https://sbti-test.club/" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-foreground transition-colors">SBTI Test</a></li>
             </ul>
           </div>
         </div>
