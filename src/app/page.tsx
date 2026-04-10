@@ -159,13 +159,13 @@ export default async function HomePage() {
           </div>
           <div className="mt-8 space-y-6 text-muted leading-relaxed">
             <p className="text-lg">
-              <strong className="text-foreground">Milla Jovovich</strong> — the actress behind Alice in the <em>Resident Evil</em> franchise and
+              <Link href="/milla-jovovich" className="text-foreground font-bold hover:text-accent transition-colors">Milla Jovovich</Link> — the actress behind Alice in the <em>Resident Evil</em> franchise and
               Leeloo in <em>The Fifth Element</em> — has been using AI tools daily for months. She accumulated thousands of conversations
               with ChatGPT and Claude: decisions, creative ideas, business reasoning, debugging sessions.
             </p>
             <p className="text-lg">
               Then she noticed something infuriating: <strong className="text-foreground">every time she started a new session, her AI had amnesia.</strong>{" "}
-              All those decisions, all that context — gone. She tried existing memory tools like Mem0 and Zep, but they had a fundamental problem:
+              All those decisions, all that context — gone. She tried existing memory tools like <Link href="/compare/mempalace-vs-mem0" className="text-foreground underline decoration-accent/30 hover:decoration-accent">Mem0</Link> and <Link href="/compare/mempalace-vs-zep" className="text-foreground underline decoration-accent/30 hover:decoration-accent">Zep</Link>, but they had a fundamental problem:
               they used AI to decide what was worth remembering. The reasoning she needed most was exactly what got discarded.
             </p>
             <p className="text-lg">
@@ -355,8 +355,8 @@ export default async function HomePage() {
                   <td className="px-5 py-3 text-success">Yes</td>
                 </tr>
                 <tr><td className="px-5 py-3 text-foreground">Supermemory</td><td className="px-5 py-3 text-muted">~99%</td><td className="px-5 py-3 text-muted">Paid</td><td className="px-5 py-3 text-muted">No</td></tr>
-                <tr><td className="px-5 py-3 text-foreground">Mem0</td><td className="px-5 py-3 text-muted">~85%</td><td className="px-5 py-3 text-muted">$19-249/mo</td><td className="px-5 py-3 text-muted">No</td></tr>
-                <tr><td className="px-5 py-3 text-foreground">Zep</td><td className="px-5 py-3 text-muted">~85%</td><td className="px-5 py-3 text-muted">$25/mo+</td><td className="px-5 py-3 text-muted">No</td></tr>
+                <tr><td className="px-5 py-3 text-foreground"><Link href="/compare/mempalace-vs-mem0" className="hover:text-accent transition-colors">Mem0</Link></td><td className="px-5 py-3 text-muted">~85%</td><td className="px-5 py-3 text-muted">$19-249/mo</td><td className="px-5 py-3 text-muted">No</td></tr>
+                <tr><td className="px-5 py-3 text-foreground"><Link href="/compare/mempalace-vs-zep" className="hover:text-accent transition-colors">Zep</Link></td><td className="px-5 py-3 text-muted">~85%</td><td className="px-5 py-3 text-muted">$25/mo+</td><td className="px-5 py-3 text-muted">No</td></tr>
               </tbody>
             </table>
           </div>

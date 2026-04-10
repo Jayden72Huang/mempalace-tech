@@ -576,7 +576,12 @@ export default function BenchmarkAnalysisPage() {
                     }`}
                   >
                     <td className="px-4 py-3 font-medium text-foreground">
-                      {row.system}
+                      {({
+                        "Mem0": <Link href="/compare/mempalace-vs-mem0" className="hover:text-accent transition-colors">{row.system}</Link>,
+                        "Zep": <Link href="/compare/mempalace-vs-zep" className="hover:text-accent transition-colors">{row.system}</Link>,
+                        "Letta": <Link href="/compare/mempalace-vs-letta" className="hover:text-accent transition-colors">{row.system}</Link>,
+                        "SuperMemory": <Link href="/compare/mempalace-vs-supermemory" className="hover:text-accent transition-colors">{row.system}</Link>,
+                      } as Record<string, React.ReactNode>)[row.system] ?? row.system}
                     </td>
                     <td className="px-4 py-3 text-foreground">
                       {row.longMemRaw}

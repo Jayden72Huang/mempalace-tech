@@ -17,6 +17,8 @@ export default function Footer() {
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-muted">Compare</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/compare/mempalace-vs-mem0" className="text-zinc-400 hover:text-foreground transition-colors">MemPalace vs Mem0</Link></li>
+              <li><Link href="/compare/mempalace-vs-zep" className="text-zinc-400 hover:text-foreground transition-colors">MemPalace vs Zep</Link></li>
+              <li><Link href="/compare/mempalace-vs-letta" className="text-zinc-400 hover:text-foreground transition-colors">MemPalace vs Letta</Link></li>
               <li><Link href="/tools" className="text-zinc-400 hover:text-foreground transition-colors">All AI Memory Tools</Link></li>
               <li><Link href="/benchmarks" className="text-zinc-400 hover:text-foreground transition-colors">Benchmark Analysis</Link></li>
               <li><Link href="/quiz" className="text-zinc-400 hover:text-foreground transition-colors">Framework Quiz</Link></li>
@@ -26,6 +28,8 @@ export default function Footer() {
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-muted">Resources</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/story" className="text-zinc-400 hover:text-foreground transition-colors">The Story</Link></li>
+              <li><Link href="/milla-jovovich" className="text-zinc-400 hover:text-foreground transition-colors">Milla Jovovich</Link></li>
+              <li><Link href="/blog" className="text-zinc-400 hover:text-foreground transition-colors">Blog</Link></li>
               <li><a href="https://github.com/milla-jovovich/mempalace" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-foreground transition-colors">GitHub Repository</a></li>
               <li><a href="https://pypi.org/project/mempalace/" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-foreground transition-colors">PyPI Package</a></li>
               <li><a href="https://ai-memory-weekly.beehiiv.com" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-foreground transition-colors">Newsletter</a></li>

@@ -17,5 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/compare/mempalace-vs-supermemory`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/compare/mempalace-vs-cognee`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/compare/mempalace-vs-langmem`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/milla-jovovich`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${base}/blog/what-is-ai-memory`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/blog/add-memory-to-claude-code`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/blog/best-ai-memory-frameworks-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
   ];
 }

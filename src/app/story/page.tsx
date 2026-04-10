@@ -130,9 +130,9 @@ export default function StoryPage() {
           </p>
           <p>
             So she went looking for a fix. She tried{" "}
-            <a href="https://mem0.ai" target="_blank" rel="noopener noreferrer" className="text-accent underline decoration-accent/30 hover:decoration-accent">Mem0</a>,
+            <Link href="/compare/mempalace-vs-mem0" className="text-accent underline decoration-accent/30 hover:decoration-accent">Mem0</Link>,
             the YC-backed memory layer that has raised $24 million. She tried{" "}
-            <a href="https://getzep.com" target="_blank" rel="noopener noreferrer" className="text-accent underline decoration-accent/30 hover:decoration-accent">Zep</a>.
+            <Link href="/compare/mempalace-vs-zep" className="text-accent underline decoration-accent/30 hover:decoration-accent">Zep</Link>.
             She tried several other memory tools in the emerging ecosystem.
           </p>
           <p>
@@ -290,7 +290,7 @@ export default function StoryPage() {
           <p>
             The README made a bold statement: <strong className="text-foreground">100% on LongMemEval</strong>, the
             standard benchmark for AI memory systems. A perfect score. The first one ever published. Higher than
-            Mem0, higher than Zep, higher than every well-funded competitor in the space.
+            <Link href="/compare/mempalace-vs-mem0" className="text-foreground underline decoration-accent/30 hover:decoration-accent">Mem0</Link>, higher than <Link href="/compare/mempalace-vs-zep" className="text-foreground underline decoration-accent/30 hover:decoration-accent">Zep</Link>, higher than every well-funded competitor in the space.
           </p>
           <p>
             Within hours, the scrutiny began.
