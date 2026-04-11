@@ -195,6 +195,15 @@ export default function BenchmarkAnalysisPage() {
           <span className="text-foreground">Not affiliated with MemPalace</span>
         </p>
 
+        <p className="mt-3 text-muted text-[15px] leading-relaxed">
+          MemPalace is the open-source AI memory system co-created by{" "}
+          <Link href="/milla-jovovich" className="text-accent underline decoration-accent/30 hover:decoration-accent">
+            Milla Jovovich
+          </Link>{" "}
+          and developer Ben Sigman. This page audits their published benchmark numbers
+          against independent re-runs.
+        </p>
+
         {/* ---------- TL;DR ---------- */}
         <section className="mt-10 rounded-xl border border-accent/30 bg-accent/5 p-6 sm:p-8">
           <h2 className="text-lg font-semibold text-accent mb-4">

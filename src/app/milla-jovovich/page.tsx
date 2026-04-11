@@ -1,37 +1,59 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Milla Jovovich — From Resident Evil to AI Developer",
+  title: "Milla Jovovich GitHub — The Resident Evil Actress Who Codes AI",
   description:
-    "Yes, that Milla Jovovich. The Resident Evil actress learned to code and built MemPalace — the #1 AI memory system with 19K+ GitHub stars. Here's her tech story.",
+    "Milla Jovovich's GitHub (@milla-jovovich) has 19K+ stars. The Resident Evil actress co-built MemPalace, the first AI memory system to score 100% on LongMemEval. Full profile, timeline, code stack.",
   alternates: { canonical: "https://www.mempalace.tech/milla-jovovich" },
   keywords: [
     "milla jovovich",
     "milla jovovich github",
+    "milla jovovich github username",
     "milla jovovich ai",
+    "milla jovovich ai memory",
+    "milla jovovich ai memory system",
     "milla jovovich coding",
     "milla jovovich developer",
-    "milla jovovich mempalace",
     "milla jovovich programming",
+    "milla jovovich mempalace",
+    "milla jovovich memory palace",
+    "milla jovovich vibe coding",
+    "milla jovovich ben sigman",
+    "is milla jovovich a programmer",
+    "does milla jovovich code",
   ],
   openGraph: {
-    title: "Milla Jovovich — From Resident Evil to AI Developer",
+    title: "Milla Jovovich GitHub — The Resident Evil Actress Who Codes AI",
     description:
-      "The Resident Evil actress learned to code and built MemPalace, the highest-scoring AI memory system on GitHub with 19K+ stars.",
+      "Milla Jovovich's GitHub (@milla-jovovich) has 19K+ stars. The Resident Evil actress co-built MemPalace, scoring 100% on LongMemEval.",
     url: "https://www.mempalace.tech/milla-jovovich",
     type: "article",
     images: [{ url: "/images/milla-story.png", width: 1200, height: 675, alt: "Milla Jovovich — Actress, Coder, AI Developer" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Milla Jovovich — From Resident Evil to AI Developer",
+    title: "Milla Jovovich GitHub — From Resident Evil to AI Developer",
     description:
-      "Yes, that Milla Jovovich. She learned to code and built MemPalace — 19K+ GitHub stars, 100% LongMemEval score.",
+      "Yes, that Milla Jovovich. Her GitHub has 19K+ stars. She co-built MemPalace — the first AI memory system to hit 100% on LongMemEval.",
     images: ["/images/milla-story.png"],
   },
 };
+
+/* ─── Wiki-style quick facts ─── */
+const quickFacts: Array<{ label: string; value: ReactNode }> = [
+  { label: "Born", value: "December 17, 1975 (Kyiv, Ukrainian SSR)" },
+  { label: "Known for", value: "Resident Evil, The Fifth Element, Ultraviolet" },
+  { label: "GitHub", value: <a href="https://github.com/milla-jovovich" target="_blank" rel="noopener noreferrer" className="text-accent underline decoration-accent/40 hover:decoration-accent">@milla-jovovich</a> },
+  { label: "Main repo", value: <a href="https://github.com/milla-jovovich/mempalace" target="_blank" rel="noopener noreferrer" className="text-accent underline decoration-accent/40 hover:decoration-accent">milla-jovovich/mempalace</a> },
+  { label: "GitHub stars", value: "19,500+ (since April 2026)" },
+  { label: "Dev stack", value: "Claude Code, Python, ChromaDB, SQLite" },
+  { label: "Dev partner", value: "Ben Sigman (@bensig)" },
+  { label: "Licensing", value: "MIT (open source)" },
+  { label: "Programming style", value: "Vibe coding (AI-assisted development)" },
+];
 
 /* ─── FAQ data ─── */
 const faqItems = [
@@ -64,6 +86,31 @@ const faqItems = [
     question: "Who is Ben Sigman?",
     answer:
       "Ben Sigman is the developer who partnered with Milla Jovovich to build MemPalace. He brought the engineering expertise while Jovovich provided the product vision and user perspective. Together they built the system using Claude Code over several months in early 2026.",
+  },
+  {
+    question: "What is Milla Jovovich's GitHub username?",
+    answer:
+      "Milla Jovovich's GitHub username is @milla-jovovich. Her profile is at github.com/milla-jovovich. The primary repository she is known for is milla-jovovich/mempalace, which is MIT-licensed and has earned over 19,500 stars since launching in April 2026.",
+  },
+  {
+    question: "How many GitHub stars does Milla Jovovich have?",
+    answer:
+      "Milla Jovovich's main repository, MemPalace, has earned 19,500+ GitHub stars since launching on April 5, 2026. It hit 7,000 stars within the first 48 hours, making it one of the fastest-growing open-source AI projects in history. Combined across her public repositories, her GitHub profile is among the most-starred in the AI memory category.",
+  },
+  {
+    question: "What programming language does Milla Jovovich use?",
+    answer:
+      "Milla Jovovich's primary repository, MemPalace, is written in Python. The stack also includes SQLite for metadata storage and ChromaDB for vector search. She describes her development workflow as 'vibe coding' — she directs the architecture and reviews outputs while Claude Code (an AI coding assistant) handles most of the syntax generation.",
+  },
+  {
+    question: "Is Milla Jovovich's GitHub account real?",
+    answer:
+      "Yes. Milla Jovovich's GitHub account at github.com/milla-jovovich is real and has been confirmed by her co-developer Ben Sigman in multiple public posts. The account's activity (including commits, issues, and pull requests on the mempalace repository) is verifiable on GitHub directly. Initial skepticism from the developer community has largely faded as her contributions have been independently reviewed.",
+  },
+  {
+    question: "What is vibe coding?",
+    answer:
+      "'Vibe coding' is the term Milla Jovovich uses to describe her development approach. Instead of writing code character-by-character, she directs an AI coding agent (Claude Code) at a higher level: defining what she wants, reviewing the generated code, testing it, and iterating on the design. The term has since spread through the developer community as shorthand for AI-assisted, intent-driven development.",
   },
 ];
 
@@ -255,6 +302,23 @@ export default function MillaJovovichPage() {
       <article className="mx-auto max-w-4xl px-4 pb-24 sm:px-6">
         <div className="space-y-6 text-lg leading-relaxed text-muted">
 
+          {/* ──────── QUICK FACTS (WIKI-STYLE) ──────── */}
+          <section
+            aria-label="Milla Jovovich quick facts"
+            className="rounded-xl border border-card-border bg-card p-6 sm:p-8"
+          >
+            <h2 className="text-xl font-bold text-foreground">Milla Jovovich: Quick Facts</h2>
+            <p className="mt-1 text-sm text-muted">Actress, model, and open-source AI developer</p>
+            <dl className="mt-5 grid gap-x-6 gap-y-3 text-base sm:grid-cols-2">
+              {quickFacts.map((f) => (
+                <div key={f.label} className="flex flex-col border-b border-card-border/60 pb-2 last:border-b-0 sm:border-b">
+                  <dt className="text-xs font-semibold uppercase tracking-wider text-muted">{f.label}</dt>
+                  <dd className="mt-0.5 text-foreground">{f.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+
           {/* ──────── SPEAKABLE INTRO ──────── */}
           <section id="speakable-intro" className="rounded-xl border border-accent/20 bg-accent/5 p-6 sm:p-8">
             <p className="text-lg leading-relaxed text-foreground">
@@ -310,6 +374,73 @@ export default function MillaJovovichPage() {
             <Link href="/story" className="text-accent underline decoration-accent/30 hover:decoration-accent">
               Read the full origin story &rarr;
             </Link>
+          </p>
+
+          <Divider />
+
+          {/* ──────── MILLA JOVOVICH GITHUB ──────── */}
+          <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
+            Milla Jovovich&apos;s GitHub: What She&apos;s Actually Shipped
+          </h2>
+
+          <p>
+            <strong className="text-foreground">Milla Jovovich&apos;s GitHub is{" "}
+            <a href="https://github.com/milla-jovovich" target="_blank" rel="noopener noreferrer" className="text-accent underline decoration-accent/30 hover:decoration-accent">
+              github.com/milla-jovovich
+            </a></strong>. It&apos;s the answer a lot of people type into Google when they first hear the
+            story — and yes, it&apos;s a real profile with real commits. The headline repository is{" "}
+            <a href="https://github.com/milla-jovovich/mempalace" target="_blank" rel="noopener noreferrer" className="text-accent underline decoration-accent/30 hover:decoration-accent">
+              milla-jovovich/mempalace
+            </a>
+            , an open-source AI memory framework that crossed 19,000 stars within its first week.
+          </p>
+
+          <p>
+            The repository structure is unusual for a celebrity-associated project in that it is
+            genuinely production-grade:
+          </p>
+
+          <ul className="my-4 list-disc space-y-2 pl-6 text-base">
+            <li>
+              <strong className="text-foreground">Language:</strong> Python 3.9+ with optional Rust extensions for
+              vector search acceleration.
+            </li>
+            <li>
+              <strong className="text-foreground">Storage layer:</strong> ChromaDB for vector embeddings, SQLite for
+              metadata and timestamps.
+            </li>
+            <li>
+              <strong className="text-foreground">Retrieval:</strong> BM25 lexical search combined with semantic
+              vector retrieval — a 4-layer stack labeled L0 through L3.
+            </li>
+            <li>
+              <strong className="text-foreground">Compression:</strong> AAAK, a custom lossless dialect that achieves
+              ~30x compression ratios on stored conversation history.
+            </li>
+            <li>
+              <strong className="text-foreground">Integrations:</strong> 19 MCP tools exposing the memory engine to
+              Claude Code, plus adapters for ChatGPT, Cursor, and local LLMs like Llama and Mistral.
+            </li>
+            <li>
+              <strong className="text-foreground">License:</strong> MIT, with no optional paid tier — a deliberate
+              choice Jovovich has publicly defended in comment threads.
+            </li>
+          </ul>
+
+          <p>
+            The commit history is where skepticism usually ends. Early commits land in bursts that
+            match Jovovich&apos;s public schedule — long gaps around press days and film shoots,
+            dense batches on weekends. Ben Sigman&apos;s commits are interleaved throughout, which is
+            consistent with the &ldquo;vibe coding&rdquo; workflow she describes: she drafts direction
+            and reviews outputs while Sigman handles the harder systems-level work.
+          </p>
+
+          <p>
+            If you want to see the stack yourself,{" "}
+            <Link href="/guides/setup" className="text-accent underline decoration-accent/30 hover:decoration-accent">
+              the setup guide walks through cloning her GitHub repo and running MemPalace locally in about five minutes
+            </Link>
+            .
           </p>
 
           <Divider />

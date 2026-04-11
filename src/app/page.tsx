@@ -122,9 +122,12 @@ export default async function HomePage() {
               But not everyone believes the numbers.
             </p>
 
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
               <Link href="/story" className="inline-flex items-center rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-accent-hover">
                 Read the Full Story &rarr;
+              </Link>
+              <Link href="/milla-jovovich" className="inline-flex items-center rounded-full border border-accent/40 bg-accent/10 px-7 py-3.5 text-base font-semibold text-accent transition-colors hover:bg-accent/20">
+                Who Is Milla Jovovich? &rarr;
               </Link>
               <Link href="/benchmarks" className="inline-flex items-center rounded-full border border-card-border px-7 py-3.5 text-base font-semibold text-foreground transition-colors hover:bg-card">
                 Are the Benchmarks Real?
@@ -161,7 +164,10 @@ export default async function HomePage() {
             <p className="text-lg">
               <Link href="/milla-jovovich" className="text-foreground font-bold hover:text-accent transition-colors">Milla Jovovich</Link> — the actress behind Alice in the <em>Resident Evil</em> franchise and
               Leeloo in <em>The Fifth Element</em> — has been using AI tools daily for months. She accumulated thousands of conversations
-              with ChatGPT and Claude: decisions, creative ideas, business reasoning, debugging sessions.
+              with ChatGPT and Claude: decisions, creative ideas, business reasoning, debugging sessions.{" "}
+              <Link href="/milla-jovovich" className="text-accent underline decoration-accent/30 hover:decoration-accent">
+                Read the full Milla Jovovich backstory &rarr;
+              </Link>
             </p>
             <p className="text-lg">
               Then she noticed something infuriating: <strong className="text-foreground">every time she started a new session, her AI had amnesia.</strong>{" "}
@@ -443,9 +449,10 @@ export default async function HomePage() {
       <section className="border-t border-card-border py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Explore MemPalace</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {[
-              { href: "/story", title: "The Full Story", desc: "How Milla Jovovich went from Resident Evil to GitHub", icon: "📖" },
+              { href: "/milla-jovovich", title: "Milla Jovovich", desc: "Actress, coder, AI developer — her full profile & GitHub story", icon: "🎬" },
+              { href: "/story", title: "The Full Story", desc: "How a Resident Evil actress shipped open-source AI", icon: "📖" },
               { href: "/benchmarks", title: "Benchmark Analysis", desc: "Independent look at the 100% score controversy", icon: "📊" },
               { href: "/guides/setup", title: "Setup Guide", desc: "Install and configure MemPalace in 5 minutes", icon: "🛠" },
               { href: "/compare/mempalace-vs-mem0", title: "vs Mem0", desc: "Feature-by-feature comparison with pricing", icon: "⚖" },

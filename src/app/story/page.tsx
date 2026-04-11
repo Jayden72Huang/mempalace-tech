@@ -106,12 +106,15 @@ export default function StoryPage() {
           <h2 className="!mt-0 text-2xl font-bold text-foreground sm:text-3xl">Act 1: The Frustration</h2>
 
           <p>
-            Milla Jovovich is not the person you expect to find on GitHub.
+            <Link href="/milla-jovovich" className="text-foreground font-semibold hover:text-accent transition-colors">Milla Jovovich</Link> is not the person you expect to find on GitHub.
           </p>
           <p>
             She is, of course, the actress who made Alice an icon across six <em>Resident Evil</em> films, who played Leeloo
             in Luc Besson&apos;s <em>The Fifth Element</em>, and who has spent three decades as one of Hollywood&apos;s
-            most recognizable action stars. She is not, by any stretch of the traditional imagination, a software developer.
+            most recognizable action stars. She is not, by any stretch of the traditional imagination, a software developer.{" "}
+            <Link href="/milla-jovovich" className="text-accent underline decoration-accent/30 hover:decoration-accent">
+              (See her full profile, GitHub, and dev stack &rarr;)
+            </Link>
           </p>
           <p>
             But somewhere in late 2025, Jovovich started using AI — ChatGPT, Claude, the usual suspects — not casually,
