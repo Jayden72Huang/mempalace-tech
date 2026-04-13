@@ -6,11 +6,11 @@ import ContinueReading from "@/components/ContinueReading";
 export const metadata: Metadata = {
   title: "Install MemPalace in 5 Minutes — Claude Code, ChatGPT & Cursor Guide",
   description:
-    "3 commands to give your AI permanent memory. pip install → init → connect. Free setup guide with MCP configs for Claude Code, ChatGPT & Cursor. No cloud account needed.",
+    "pip install mempalace → 3 commands → done. Your AI never forgets again. Free setup guide with MCP configs for Claude Code, ChatGPT & Cursor. MIT license, no API keys, no cloud account.",
   alternates: { canonical: "https://www.mempalace.tech/guides/setup" },
   openGraph: {
     title: "Install MemPalace in 5 Minutes — Claude Code, ChatGPT & Cursor Guide",
-    description: "3 commands to give your AI permanent memory. Free setup with MCP configs for Claude Code, ChatGPT & Cursor.",
+    description: "pip install mempalace → 3 commands → done. Free setup with MCP configs for Claude Code, ChatGPT & Cursor.",
     url: "https://www.mempalace.tech/guides/setup",
     type: "article",
     images: [{ url: "/images/architecture.png", width: 1200, height: 675, alt: "MemPalace architecture diagram" }],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Install MemPalace in 5 Minutes — Claude Code, ChatGPT & Cursor Guide",
-    description: "3 commands to give your AI permanent memory. Free setup with MCP configs for Claude Code, ChatGPT & Cursor.",
+    description: "pip install mempalace → 3 commands → done. Free setup with MCP configs for Claude Code, ChatGPT & Cursor.",
   },
 };
 

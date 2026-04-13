@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Milla Jovovich GitHub — The Resident Evil Actress Who Codes AI",
+  title: "Milla Jovovich GitHub Profile — AI Projects, MemPalace & Code Stack (2026)",
   description:
-    "Milla Jovovich's GitHub (@milla-jovovich) has 19K+ stars. The Resident Evil actress co-built MemPalace, the first AI memory system to score 100% on LongMemEval. Full profile, timeline, code stack.",
+    "Milla Jovovich's GitHub (@milla-jovovich) has 19K+ stars. The Resident Evil actress co-built MemPalace, the first AI memory system to score 100% on LongMemEval. Full profile, timeline, dev stack & FAQ.",
   alternates: { canonical: "https://www.mempalace.tech/milla-jovovich" },
   keywords: [
     "milla jovovich",
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     "does milla jovovich code",
   ],
   openGraph: {
-    title: "Milla Jovovich GitHub — The Resident Evil Actress Who Codes AI",
+    title: "Milla Jovovich GitHub Profile — AI Projects, MemPalace & Code Stack (2026)",
     description:
-      "Milla Jovovich's GitHub (@milla-jovovich) has 19K+ stars. The Resident Evil actress co-built MemPalace, scoring 100% on LongMemEval.",
+      "Milla Jovovich's GitHub (@milla-jovovich) has 19K+ stars. The Resident Evil actress co-built MemPalace, scoring 100% on LongMemEval. Full profile & FAQ.",
     url: "https://www.mempalace.tech/milla-jovovich",
     type: "article",
     images: [{ url: "/images/milla-story.png", width: 1200, height: 675, alt: "Milla Jovovich — Actress, Coder, AI Developer" }],

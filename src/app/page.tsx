@@ -6,9 +6,9 @@ import AdsterraNative from "@/components/AdsterraNative";
 import { getGitHubStats } from "@/lib/github";
 
 export const metadata: Metadata = {
-  title: "MemPalace — Milla Jovovich's AI Memory System",
+  title: "MemPalace — Milla Jovovich's AI Memory System on GitHub",
   description:
-    "Milla Jovovich built MemPalace on GitHub — first 100% LongMemEval score. Free, local, MIT. The story, benchmark controversy & setup guide.",
+    "Milla Jovovich built MemPalace on GitHub — 19K+ stars, first 100% LongMemEval score. Free, local, MIT licensed. The story, benchmark controversy & 5-minute setup guide.",
   keywords: [
     "mempalace",
     "milla jovovich",
@@ -463,6 +463,57 @@ export default async function HomePage() {
                 <p className="mt-1 text-sm text-muted">{card.desc}</p>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ======================== BLOG + MORE COMPARISONS ======================== */}
+      <section className="border-t border-card-border py-16 sm:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="grid gap-12 lg:grid-cols-2">
+            {/* Left: Blog articles */}
+            <div>
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">From the Blog</h2>
+              <p className="mt-2 text-muted text-sm">Tutorials and deep dives on AI memory systems.</p>
+              <div className="mt-6 space-y-4">
+                {[
+                  { href: "/blog/what-is-ai-memory", title: "What Is an AI Memory System? Complete Guide (2026)", desc: "How persistent memory works, why it matters, and how the top frameworks compare." },
+                  { href: "/blog/add-memory-to-claude-code", title: "How to Add Persistent Memory to Claude Code", desc: "3 commands to give Claude Code permanent memory. Free, local, no API keys." },
+                  { href: "/blog/best-ai-memory-frameworks-2026", title: "Best AI Memory Frameworks in 2026 — Ranked", desc: "We tested 8 frameworks on LongMemEval. Full comparison of pricing, features & architecture." },
+                ].map((post) => (
+                  <Link key={post.href} href={post.href} className="group block rounded-lg border border-card-border bg-card p-4 transition-colors hover:border-accent/50">
+                    <h3 className="font-semibold text-foreground group-hover:text-accent transition-colors text-[15px]">{post.title}</h3>
+                    <p className="mt-1 text-sm text-muted">{post.desc}</p>
+                  </Link>
+                ))}
+              </div>
+              <Link href="/blog" className="mt-4 inline-block text-sm text-accent font-medium hover:text-accent-hover transition-colors">
+                All blog posts &rarr;
+              </Link>
+            </div>
+
+            {/* Right: More comparisons */}
+            <div>
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Compare AI Memory Systems</h2>
+              <p className="mt-2 text-muted text-sm">See how MemPalace stacks up against every alternative.</p>
+              <div className="mt-6 space-y-4">
+                {[
+                  { href: "/compare/mempalace-vs-mem0", title: "MemPalace vs Mem0", desc: "$0 vs $249/mo. 96.6% vs ~85% on LongMemEval." },
+                  { href: "/compare/mempalace-vs-supermemory", title: "MemPalace vs SuperMemory", desc: "Open-source vs managed cloud. Local-first vs API-dependent." },
+                  { href: "/compare/mempalace-vs-letta", title: "MemPalace vs Letta", desc: "Pure memory vs agent framework. Different goals, different strengths." },
+                  { href: "/compare/mempalace-vs-zep", title: "MemPalace vs Zep", desc: "Free vs usage-based pricing. Verbatim vs summarization." },
+                  { href: "/compare/mempalace-vs-cognee", title: "MemPalace vs Cognee", desc: "Vector search vs knowledge graph. Two approaches to AI memory." },
+                ].map((comp) => (
+                  <Link key={comp.href} href={comp.href} className="group block rounded-lg border border-card-border bg-card p-4 transition-colors hover:border-accent/50">
+                    <h3 className="font-semibold text-foreground group-hover:text-accent transition-colors text-[15px]">{comp.title}</h3>
+                    <p className="mt-1 text-sm text-muted">{comp.desc}</p>
+                  </Link>
+                ))}
+              </div>
+              <Link href="/tools" className="mt-4 inline-block text-sm text-accent font-medium hover:text-accent-hover transition-colors">
+                View all AI memory tools &rarr;
+              </Link>
+            </div>
           </div>
         </div>
       </section>

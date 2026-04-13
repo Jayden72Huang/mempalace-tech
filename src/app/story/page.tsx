@@ -5,14 +5,14 @@ import ContinueReading from "@/components/ContinueReading";
 import AdsterraNative from "@/components/AdsterraNative";
 
 export const metadata: Metadata = {
-  title: "Why Milla Jovovich Has a GitHub — The MemPalace Origin Story",
+  title: "Milla Jovovich GitHub: How a Resident Evil Star Built an AI Memory System",
   description:
-    "A Resident Evil actress got frustrated with AI amnesia. So she learned to code and built the #1 AI memory system — 19K+ GitHub stars, 100% benchmark score. Here's what happened.",
+    "Milla Jovovich's GitHub has 19K+ stars. The Resident Evil actress got frustrated with AI amnesia, learned to code, and built MemPalace — the #1 AI memory system. Full story inside.",
   alternates: { canonical: "https://www.mempalace.tech/story" },
   openGraph: {
-    title: "Why Milla Jovovich Has a GitHub — The MemPalace Origin Story",
+    title: "Milla Jovovich GitHub: How a Resident Evil Star Built an AI Memory System",
     description:
-      "A Resident Evil actress learned to code and built the highest-scoring AI memory system. 19K+ stars in weeks.",
+      "Milla Jovovich's GitHub has 19K+ stars. She learned to code and built the highest-scoring AI memory system. Full story.",
     url: "https://www.mempalace.tech/story",
     type: "article",
     images: [{ url: "/images/hero-palace.png", width: 1200, height: 675 }],
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Why Milla Jovovich Has a GitHub — The MemPalace Origin Story",
+  headline: "Milla Jovovich GitHub: How a Resident Evil Star Built an AI Memory System",
   description:
-    "A Resident Evil actress got frustrated with AI amnesia. So she learned to code and built the #1 AI memory system — 19K+ stars, 100% benchmark score.",
+    "Milla Jovovich's GitHub has 19K+ stars. She learned to code and built the #1 AI memory system with a 100% benchmark score.",
   image: "https://www.mempalace.tech/images/hero-palace.png",
   datePublished: "2026-04-06",
   dateModified: "2026-04-07",

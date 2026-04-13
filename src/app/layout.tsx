@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mempalace.tech"),
   title: {
-    default: "MemPalace — Milla Jovovich's AI Memory System",
+    default: "MemPalace — Milla Jovovich's AI Memory System on GitHub",
     template: "%s | MemPalace.tech",
   },
   description:
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "MemPalace.tech",
-    title: "MemPalace — Milla Jovovich's AI Memory System",
+    title: "MemPalace — Milla Jovovich's AI Memory System on GitHub",
     description:
       "Milla Jovovich built an AI memory system with 7000+ stars. The story, benchmark controversy, and how it works.",
     url: "https://www.mempalace.tech",

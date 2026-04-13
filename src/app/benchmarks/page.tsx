@@ -4,21 +4,21 @@ import ContinueReading from "@/components/ContinueReading";
 import AdsterraNative from "@/components/AdsterraNative";
 
 export const metadata: Metadata = {
-  title: "Is MemPalace's 100% Score Real? We Fact-Checked Every Claim",
+  title: "MemPalace Benchmark Results: 96.6% LongMemEval — Fact-Checked & Explained",
   description:
-    "The raw LongMemEval score is actually 96.6%. We dig into the methodology, the LoCoMo controversy, AAAK compression tradeoffs, and how MemPalace compares to Mem0, Zep & Letta.",
+    "Independent analysis of MemPalace's benchmark claims. Raw LongMemEval score is 96.6% (not 100%). We break down the methodology, LoCoMo controversy, AAAK compression tradeoffs, and comparison with Mem0, Zep & Letta.",
   alternates: { canonical: "https://www.mempalace.tech/benchmarks" },
   openGraph: {
-    title: "Is MemPalace's 100% Score Real? We Fact-Checked Every Claim",
+    title: "MemPalace Benchmark Results: 96.6% LongMemEval — Fact-Checked & Explained",
     description:
-      "Independent fact-check of MemPalace's benchmark claims. Raw score 96.6%, not 100%. Full methodology analysis.",
+      "Independent fact-check of MemPalace's benchmark claims. Raw score 96.6%, not 100%. Full methodology analysis with comparison table.",
     url: "https://www.mempalace.tech/benchmarks",
     type: "article",
     images: [{ url: "/images/og-image.png", width: 1200, height: 675, alt: "MemPalace Benchmark Analysis" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Is MemPalace's 100% Score Real? We Fact-Checked Every Claim",
+    title: "MemPalace Benchmark Results: 96.6% LongMemEval — Fact-Checked & Explained",
     description: "The raw score is 96.6%. Independent analysis of every benchmark claim and the controversy.",
     images: ["/images/og-image.png"],
   },
